@@ -32,21 +32,21 @@ public class UserController {
 	
 	// method for registration
 	@PostMapping("/register")
-	public ResponseEntity<String> register(@Valid @RequestBody UserDTO userDTO)
+	public ResponseEntity<Response> register(@Valid @RequestBody UserDTO userDTO)
 	{
 		logger.info("userDTO data"+userDTO.toString());
 		logger.trace("User Registration");
-		String statusResponse = userServices.register(userDTO);
-		return new ResponseEntity<String>(statusResponse, HttpStatus.OK);
+		Response statusResponse = userServices.register(userDTO);
+		return new ResponseEntity<Response>(statusResponse, HttpStatus.OK);
 	}
 	
 	// method for login
 	@PostMapping("/login")
-	public ResponseEntity<String> login(@Valid @RequestBody LoginDTO loginDto) throws IllegalArgumentException, UnsupportedEncodingException{
+	public ResponseEntity<ResponseToken> login(@Valid @RequestBody LoginDTO loginDto) throws IllegalArgumentException, UnsupportedEncodingException{
 		logger.info("LoginDTO data " + loginDto.toString());
 		logger.trace("User Login");
-		String statusResponse = userServices.login(loginDto);
-		return new ResponseEntity<String>(statusResponse, HttpStatus.OK);
+		ResponseToken statusResponse = userServices.login(loginDto);
+		return new ResponseEntity<ResponseToken>(statusResponse, HttpStatus.OK);
 	}
 	
  

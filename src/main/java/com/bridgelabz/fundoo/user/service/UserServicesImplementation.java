@@ -8,21 +8,26 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 import com.bridgelabz.fundoo.exception.RegistrationException;
+import com.bridgelabz.fundoo.response.Response;
+import com.bridgelabz.fundoo.response.ResponseToken;
 import com.bridgelabz.fundoo.user.dto.LoginDTO;
- 
 import com.bridgelabz.fundoo.user.dto.UserDTO;
 import com.bridgelabz.fundoo.user.model.User;
 import com.bridgelabz.fundoo.user.repository.IUserRepository;
  
 @Service("userService")
+@PropertySource("classpath:message.properties")
 public class UserServicesImplementation implements IUserServices{
 	   
 	private static final Logger log = LoggerFactory.getLogger(UserServicesImplementation.class);
 	
-
+	@Autowired
+	private Environment environment;
 	
 	@Autowired
 	private IUserRepository userRepository;
@@ -31,7 +36,7 @@ public class UserServicesImplementation implements IUserServices{
 	private ModelMapper modelMapper;
 	
 	@Override
-	public String register(UserDTO userDTO) {
+	public Response register(UserDTO userDTO) {
 		 
 		log.info(userDTO.toString());
 
@@ -58,7 +63,7 @@ public class UserServicesImplementation implements IUserServices{
 	}
 
 	@Override
-	public String login(LoginDTO loginDto) {
+	public ResponseToken login(LoginDTO loginDto) {
 		Optional<User> user = userRepository.findByEmail(loginDto.getEmail());
 		log.info("User Password : " + user.get().getPassword());
 		return null;
@@ -70,6 +75,12 @@ public class UserServicesImplementation implements IUserServices{
 		user.setUpdatedDate(LocalDate.now());
 		log.info("User : "+user);
 		return userRepository.save(user);
+	}
+
+	@Override
+	public Response forgotPassword(String email) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

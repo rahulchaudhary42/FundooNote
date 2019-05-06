@@ -551,3 +551,6 @@ Verify the connector's configuration, identify and stop any process that's liste
 2019-05-06 17:09:14.296  INFO 26380 --- [http-nio-8085-exec-3] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=aman, email=aman@gmail.com, password=123456, mobileNumber=589456123]
 2019-05-06 17:09:14.296  INFO 26380 --- [http-nio-8085-exec-3] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=aman, email=aman@gmail.com, password=123456, mobileNumber=589456123]
 2019-05-06 17:09:14.299  INFO 26380 --- [http-nio-8085-exec-3] c.b.f.u.s.UserServicesImplementation     : User [userId=5cd01ce21bad07670c45fc6e, name=aman, email=aman@gmail.com, password=123456, mobileNumber=589456123, isVarified=false, registeredDate=2019-05-06, updatedDate=null]
+2019-05-06 19:27:21.671  INFO 26380 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-06 19:27:21.676  INFO 26380 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 19:27:21.678  INFO 26380 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:9}] to localhost:27017 because the pool has been closed.
