@@ -3,19 +3,17 @@ package com.bridgelabz.fundoo.user.model;
 import java.time.LocalDate;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-//@Entity
-//@Table(name = "user123")
+ 
 public class User {
 
 	  @Id
-	//@Id
-	//@Column(name = "userId")
-	//@GeneratedValue(strategy = GenerationType.AUTO)
 	private String userId;
 	private String name;
+	@Indexed(unique=true)
 	private String email;
 	private String password;
 	private String mobileNumber;

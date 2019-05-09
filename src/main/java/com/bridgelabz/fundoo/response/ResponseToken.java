@@ -1,5 +1,8 @@
 package com.bridgelabz.fundoo.response;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ResponseToken {
 	
 	private String statusMessage;	
