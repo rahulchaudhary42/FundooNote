@@ -8,4 +8,8 @@ import com.bridgelabz.fundoo.response.Response;
 public interface INotesService {
 
 	public Response createNote(NotesDto notesDto ,String token);
+
+	public Response delete(String token , String userId);
+
+	public Response updateNote(NotesDto notesDto, String token, String userId);
 }

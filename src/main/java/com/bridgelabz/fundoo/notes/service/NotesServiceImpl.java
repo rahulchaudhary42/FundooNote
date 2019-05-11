@@ -83,6 +83,41 @@ public class NotesServiceImpl implements INotesService{
 		return response;
 	}
 	
+	@Override
+	public Response updateNote(NotesDto notesDto , String token , String id) {
+		if(notesDto.getTitle().isEmpty() && notesDto.getDescription().isEmpty()) {
+			throw new NotesException("Title and description are empty", -5);
+		}
+		
+		String ide = userToken.tokenVerify(token);
+		Note notes = notesRepository.findByIdAndUserId(id, ide);
+		notes.setTitle(notesDto.getTitle());
+		notes.setDescription(notesDto.getDescription());
+		notes.setModified(LocalDateTime.now());
+		notesRepository.save(notes);
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.notes.updated"),Integer.parseInt(environment.getProperty("status.success.code")));
+		return response;
+	}
+
+ 
+	@Override
+	public Response delete(String token, String id) {
+		String ide = userToken.tokenVerify(token);
+		Note notes = notesRepository.findByIdAndUserId(id, ide);
+		if(notes == null) {
+			throw new NotesException("Invalid input", -5);
+		}
+		if(notes.isTrash() == false) {
+			notes.setTrash(true);
+			notes.setModified(LocalDateTime.now());
+			notesRepository.save(notes);
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashed"),Integer.parseInt(environment.getProperty("status.success.code")));
+			return response;
+		}
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashError"),Integer.parseInt(environment.getProperty("status.note.errorCode")));
+		return response;
+	}
+	
 	
 
 }
