@@ -1,13 +1,14 @@
 package com.bridgelabz.fundoo.user.model;
 
 import java.time.LocalDate;
-
+import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import com.bridgelabz.fundoo.notes.model.Note;
 
-@Document
- 
+@Document(collection="usertab")
 public class User {
 
 	  @Id
@@ -15,11 +16,17 @@ public class User {
 	private String name;
 	@Indexed(unique=true)
 	private String email;
+
+
 	private String password;
 	private String mobileNumber;
 	boolean isVarified;
 	private LocalDate registeredDate;
 	private LocalDate updatedDate;
+	
+	@DBRef
+	private List<Note> notes;
+
 
 	public User() {
 		super();
@@ -88,12 +95,21 @@ public class User {
 	public void setUpdatedDate(LocalDate updatedDate) {
 		this.updatedDate = updatedDate;
 	}
+	public List<Note> getNotes() {
+		return notes;
+	}
 
+	public void setNotes(List<Note> notes) {
+		this.notes = notes;
+	}
+ 
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", password=" + password
 				+ ", mobileNumber=" + mobileNumber + ", isVarified=" + isVarified + ", registeredDate=" + registeredDate
-				+ ", updatedDate=" + updatedDate + "]";
+				+ ", updatedDate=" + updatedDate + ", notes=" + notes + "]";
 	}
+ 
+	 
 	
 }

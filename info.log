@@ -1,177 +1,63 @@
-2019-05-09 10:02:37.098  INFO 7658 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 7658 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
-2019-05-09 10:02:37.104  INFO 7658 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
-2019-05-09 10:02:37.648  INFO 7658 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-05-09 10:02:37.688  INFO 7658 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 1 repository interfaces.
-2019-05-09 10:02:38.063  INFO 7658 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2019-05-09 10:02:38.080  INFO 7658 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-05-09 10:02:38.081  INFO 7658 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-05-09 10:02:38.138  INFO 7658 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-05-09 10:02:38.138  INFO 7658 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1011 ms
-2019-05-09 10:02:38.365  INFO 7658 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-05-09 10:02:38.368  INFO 7658 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
-2019-05-09 10:02:38.409  INFO 7658 --- [cluster-ClusterId{value='5cd3ad661bad071deafe506e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+2019-05-11 09:26:59.901  INFO 4775 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 4775 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 09:26:59.907  INFO 4775 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 09:27:01.534  INFO 4775 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 09:27:01.618  INFO 4775 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 2 repository interfaces.
+2019-05-11 09:27:02.507  INFO 4775 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 09:27:02.524  INFO 4775 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 09:27:02.525  INFO 4775 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 09:27:02.616  INFO 4775 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 09:27:02.616  INFO 4775 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2451 ms
+2019-05-11 09:27:02.918  INFO 4775 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 09:27:02.918  INFO 4775 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 09:27:02.950  INFO 4775 --- [cluster-ClusterId{value='5cd6480e1bad0712a7863940', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
+2019-05-11 09:27:02.953  INFO 4775 --- [cluster-ClusterId{value='5cd6480e1bad0712a7863940', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1531429}
+2019-05-11 09:27:02.953  INFO 4775 --- [cluster-ClusterId{value='5cd6480e1bad0712a7863940', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 09:27:03.341  INFO 4775 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:3}] to localhost:27017
+2019-05-11 09:27:04.162  INFO 4775 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 09:27:04.496  INFO 4775 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 09:27:04.554  INFO 4775 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 09:27:04.562  INFO 4775 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 09:27:04.710  INFO 4775 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 09:27:04.711  INFO 4775 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 5.563 seconds (JVM running for 6.438)
+2019-05-11 09:27:13.532  INFO 4775 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 09:27:13.532  INFO 4775 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 09:27:13.541  INFO 4775 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-05-11 09:27:13.739  INFO 4775 --- [http-nio-8085-exec-1] c.b.f.user.controller.UserController     : LoginDTO data LoginDTO [email=admin@gmail.com, password=12345]
+2019-05-11 09:27:13.929  INFO 4775 --- [http-nio-8085-exec-1] c.b.f.u.s.UserServicesImplementation     : User Password : $2a$10$ls2fj.IPQ22/JhCtbseby.1Ofirq6Typ1Yqeh6m0CHbVwzkKB1CxG
+2019-05-11 10:58:56.577  INFO 4775 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 10:58:56.607  INFO 4775 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 10:58:56.610  INFO 4775 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:3}] to localhost:27017 because the pool has been closed.
+2019-05-11 10:58:57.646  INFO 8122 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 8122 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 10:58:57.648  INFO 8122 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 10:58:58.148  INFO 8122 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 10:58:58.195  INFO 8122 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 2 repository interfaces.
+2019-05-11 10:58:58.562  INFO 8122 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 10:58:58.579  INFO 8122 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 10:58:58.580  INFO 8122 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 10:58:58.636  INFO 8122 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 10:58:58.637  INFO 8122 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 968 ms
+2019-05-11 10:58:58.848  INFO 8122 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 10:58:58.848  INFO 8122 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 10:58:58.881  INFO 8122 --- [cluster-ClusterId{value='5cd65d9a1bad071fba886813', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4}] to localhost:27017
+2019-05-11 10:58:58.884  INFO 8122 --- [cluster-ClusterId{value='5cd65d9a1bad071fba886813', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1874556}
+2019-05-11 10:58:58.884  INFO 8122 --- [cluster-ClusterId{value='5cd65d9a1bad071fba886813', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 10:58:59.118  INFO 8122 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:5}] to localhost:27017
+2019-05-11 10:58:59.550  INFO 8122 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 10:58:59.730  INFO 8122 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 10:58:59.740  INFO 8122 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 10:58:59.748  INFO 8122 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 10:58:59.870  INFO 8122 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 10:58:59.872  INFO 8122 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.417 seconds (JVM running for 2.734)
+2019-05-11 11:00:21.850  INFO 8122 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 11:00:21.850  INFO 8122 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 11:00:21.859  INFO 8122 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-05-11 11:00:21.912  INFO 8122 --- [http-nio-8085-exec-2] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@6f81d66d
+2019-05-11 11:00:21.987  INFO 8122 --- [http-nio-8085-exec-2] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@6f81d66d
+2019-05-11 11:00:22.058 ERROR 8122 --- [http-nio-8085-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 
-com.mongodb.MongoSocketOpenException: Exception opening socket
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:67) ~[mongodb-driver-core-3.8.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.8.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117) ~[mongodb-driver-core-3.8.2.jar:na]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_191]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_191]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_191]
-	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64) ~[mongodb-driver-core-3.8.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:62) ~[mongodb-driver-core-3.8.2.jar:na]
-	... 3 common frames omitted
-
-2019-05-09 10:02:38.672  INFO 7658 --- [main] org.mongodb.driver.cluster               : Cluster description not yet available. Waiting for 30000 ms before timing out
-2019-05-09 10:03:08.679  WARN 7658 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userServices'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IUserRepository': Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
-2019-05-09 10:03:08.683  INFO 7658 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-05-09 10:03:08.691  INFO 7658 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-05-09 10:03:08.695 ERROR 7658 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userServices'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IUserRepository': Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at com.bridgelabz.fundoo.FundooNoteApplication.main(FundooNoteApplication.java:10) [classes/:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IUserRepository': Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IUserRepository': Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:378) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1681) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1433) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	... 32 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	... 45 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	... 55 common frames omitted
-Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
-	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:90) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2781) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:547) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.DefaultIndexOperations.execute(DefaultIndexOperations.java:218) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.DefaultIndexOperations.ensureIndex(DefaultIndexOperations.java:121) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:145) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForAndCreateIndexes(MongoPersistentEntityIndexCreator.java:135) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForIndexes(MongoPersistentEntityIndexCreator.java:127) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.<init>(MongoPersistentEntityIndexCreator.java:93) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.<init>(MongoPersistentEntityIndexCreator.java:70) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.MongoTemplate.<init>(MongoTemplate.java:249) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration.mongoTemplate(MongoDataAutoConfiguration.java:111) ~[spring-boot-autoconfigure-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration$$EnhancerBySpringCGLIB$$de9103f9.CGLIB$mongoTemplate$1(<generated>) ~[spring-boot-autoconfigure-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration$$EnhancerBySpringCGLIB$$de9103f9$$FastClassBySpringCGLIB$$9539d7cd.invoke(<generated>) ~[spring-boot-autoconfigure-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	at org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration$$EnhancerBySpringCGLIB$$de9103f9.mongoTemplate(<generated>) ~[spring-boot-autoconfigure-2.1.4.RELEASE.jar:2.1.4.RELEASE]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
-	... 56 common frames omitted
-Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
-	at com.mongodb.internal.connection.BaseCluster.getDescription(BaseCluster.java:179) ~[mongodb-driver-core-3.8.2.jar:na]
-	at com.mongodb.internal.connection.MultiServerCluster.getDescription(MultiServerCluster.java:54) ~[mongodb-driver-core-3.8.2.jar:na]
-	at com.mongodb.client.internal.MongoClientDelegate.getConnectedClusterDescription(MongoClientDelegate.java:136) ~[mongodb-driver-3.8.2.jar:na]
-	at com.mongodb.client.internal.MongoClientDelegate.createClientSession(MongoClientDelegate.java:94) ~[mongodb-driver-3.8.2.jar:na]
-	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.getClientSession(MongoClientDelegate.java:249) ~[mongodb-driver-3.8.2.jar:na]
-	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:190) ~[mongodb-driver-3.8.2.jar:na]
-	at com.mongodb.client.internal.MongoCollectionImpl.executeCreateIndexes(MongoCollectionImpl.java:805) ~[mongodb-driver-3.8.2.jar:na]
-	at com.mongodb.client.internal.MongoCollectionImpl.createIndexes(MongoCollectionImpl.java:788) ~[mongodb-driver-3.8.2.jar:na]
-	at com.mongodb.client.internal.MongoCollectionImpl.createIndexes(MongoCollectionImpl.java:783) ~[mongodb-driver-3.8.2.jar:na]
-	at com.mongodb.client.internal.MongoCollectionImpl.createIndex(MongoCollectionImpl.java:768) ~[mongodb-driver-3.8.2.jar:na]
-	at org.springframework.data.mongodb.core.DefaultIndexOperations.lambda$ensureIndex$0(DefaultIndexOperations.java:135) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:545) ~[spring-data-mongodb-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	... 75 common frames omitted
-
-2019-05-09 10:03:57.141  INFO 8139 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 8139 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
-2019-05-09 10:03:57.143  INFO 8139 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
-2019-05-09 10:03:57.561  INFO 8139 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-05-09 10:03:57.605  INFO 8139 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 1 repository interfaces.
-2019-05-09 10:03:57.950  INFO 8139 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2019-05-09 10:03:57.967  INFO 8139 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-05-09 10:03:57.967  INFO 8139 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-05-09 10:03:58.020  INFO 8139 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-05-09 10:03:58.020  INFO 8139 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 852 ms
-2019-05-09 10:03:58.194  INFO 8139 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-05-09 10:03:58.194  INFO 8139 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
-2019-05-09 10:03:58.230  INFO 8139 --- [cluster-ClusterId{value='5cd3adb61bad071fcb3d1c81', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
-2019-05-09 10:03:58.245  INFO 8139 --- [cluster-ClusterId{value='5cd3adb61bad071fcb3d1c81', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=13194313}
-2019-05-09 10:03:58.247  INFO 8139 --- [cluster-ClusterId{value='5cd3adb61bad071fcb3d1c81', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
-2019-05-09 10:03:58.423  INFO 8139 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:3}] to localhost:27017
-2019-05-09 10:03:58.625  INFO 8139 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-05-09 10:03:58.921  INFO 8139 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2019-05-09 10:03:58.923  INFO 8139 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.035 seconds (JVM running for 2.343)
-2019-05-09 10:07:10.848  INFO 8139 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-05-09 10:07:10.848  INFO 8139 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-05-09 10:07:10.853  INFO 8139 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2019-05-09 10:07:10.928  INFO 8139 --- [http-nio-8085-exec-1] c.b.f.user.controller.UserController     : LoginDTO data LoginDTO [email=rahulchaudhary7542@gmail.com, password=12345]
-2019-05-09 10:07:10.997  INFO 8139 --- [http-nio-8085-exec-1] c.b.f.u.s.UserServicesImplementation     : User Password : $2a$10$l3qQo7r/lBYFmCYcF6I5suBOYcMY8.4HLrjLrkC6fuLZ2er98aFxy
-2019-05-09 10:07:11.022 ERROR 8139 --- [http-nio-8085-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.bridgelabz.fundoo.exception.LoginException: Email is not verified ] with root cause
-
-com.bridgelabz.fundoo.exception.LoginException: Email is not verified 
-	at com.bridgelabz.fundoo.user.service.UserServicesImplementation.login(UserServicesImplementation.java:123) ~[classes/:na]
-	at com.bridgelabz.fundoo.user.controller.UserController.login(UserController.java:55) ~[classes/:na]
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:31) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
@@ -227,13 +113,40 @@ com.bridgelabz.fundoo.exception.LoginException: Email is not verified
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
 
-2019-05-09 10:07:20.171  INFO 8139 --- [http-nio-8085-exec-4] c.b.f.user.controller.UserController     : LoginDTO data LoginDTO [email=rahulchaudhary7542@gmail.com, password=123]
-2019-05-09 10:07:20.173  INFO 8139 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : User Password : $2a$10$l3qQo7r/lBYFmCYcF6I5suBOYcMY8.4HLrjLrkC6fuLZ2er98aFxy
-2019-05-09 10:07:20.174 ERROR 8139 --- [http-nio-8085-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.bridgelabz.fundoo.exception.LoginException: Email is not verified ] with root cause
+2019-05-11 11:01:45.884  INFO 8122 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 11:01:45.889  INFO 8122 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:01:45.891  INFO 8122 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:5}] to localhost:27017 because the pool has been closed.
+2019-05-11 11:01:46.883  INFO 8281 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 8281 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 11:01:46.885  INFO 8281 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 11:01:47.410  INFO 8281 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 11:01:47.454  INFO 8281 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 2 repository interfaces.
+2019-05-11 11:01:47.778  INFO 8281 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 11:01:47.794  INFO 8281 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 11:01:47.794  INFO 8281 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 11:01:47.855  INFO 8281 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 11:01:47.855  INFO 8281 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 948 ms
+2019-05-11 11:01:48.008  INFO 8281 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 11:01:48.008  INFO 8281 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 11:01:48.036  INFO 8281 --- [cluster-ClusterId{value='5cd65e441bad072059dee2e9', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
+2019-05-11 11:01:48.039  INFO 8281 --- [cluster-ClusterId{value='5cd65e441bad072059dee2e9', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1621981}
+2019-05-11 11:01:48.039  INFO 8281 --- [cluster-ClusterId{value='5cd65e441bad072059dee2e9', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 11:01:48.209  INFO 8281 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:7}] to localhost:27017
+2019-05-11 11:01:48.566  INFO 8281 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:01:48.741  INFO 8281 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 11:01:48.751  INFO 8281 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 11:01:48.759  INFO 8281 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 11:01:48.890  INFO 8281 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 11:01:48.891  INFO 8281 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.213 seconds (JVM running for 2.525)
+2019-05-11 11:01:56.401  INFO 8281 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 11:01:56.402  INFO 8281 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 11:01:56.409  INFO 8281 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-05-11 11:01:56.449  INFO 8281 --- [http-nio-8085-exec-2] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@603dfb50
+2019-05-11 11:01:56.468  INFO 8281 --- [http-nio-8085-exec-2] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@603dfb50
+2019-05-11 11:01:56.518 ERROR 8281 --- [http-nio-8085-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 
-com.bridgelabz.fundoo.exception.LoginException: Email is not verified 
-	at com.bridgelabz.fundoo.user.service.UserServicesImplementation.login(UserServicesImplementation.java:123) ~[classes/:na]
-	at com.bridgelabz.fundoo.user.controller.UserController.login(UserController.java:55) ~[classes/:na]
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:31) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
@@ -289,13 +202,40 @@ com.bridgelabz.fundoo.exception.LoginException: Email is not verified
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
 
-2019-05-09 10:45:04.212  INFO 8139 --- [http-nio-8085-exec-6] c.b.f.user.controller.UserController     : LoginDTO data LoginDTO [email=rahulchaudhary7542@gmail.com, password=123]
-2019-05-09 10:45:04.215  INFO 8139 --- [http-nio-8085-exec-6] c.b.f.u.s.UserServicesImplementation     : User Password : $2a$10$l3qQo7r/lBYFmCYcF6I5suBOYcMY8.4HLrjLrkC6fuLZ2er98aFxy
-2019-05-09 10:45:04.217 ERROR 8139 --- [http-nio-8085-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.bridgelabz.fundoo.exception.LoginException: Email is not verified ] with root cause
+2019-05-11 11:02:40.114  INFO 8281 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 11:02:40.119  INFO 8281 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:02:40.121  INFO 8281 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:7}] to localhost:27017 because the pool has been closed.
+2019-05-11 11:02:41.110  INFO 8366 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 8366 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 11:02:41.112  INFO 8366 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 11:02:41.661  INFO 8366 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 11:02:41.706  INFO 8366 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 2 repository interfaces.
+2019-05-11 11:02:42.066  INFO 8366 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 11:02:42.084  INFO 8366 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 11:02:42.084  INFO 8366 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 11:02:42.152  INFO 8366 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 11:02:42.152  INFO 8366 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1017 ms
+2019-05-11 11:02:42.325  INFO 8366 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 11:02:42.325  INFO 8366 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 11:02:42.357  INFO 8366 --- [cluster-ClusterId{value='5cd65e7a1bad0720aebab38a', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
+2019-05-11 11:02:42.361  INFO 8366 --- [cluster-ClusterId{value='5cd65e7a1bad0720aebab38a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2367368}
+2019-05-11 11:02:42.361  INFO 8366 --- [cluster-ClusterId{value='5cd65e7a1bad0720aebab38a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 11:02:42.560  INFO 8366 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:9}] to localhost:27017
+2019-05-11 11:02:42.956  INFO 8366 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:02:43.134  INFO 8366 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 11:02:43.144  INFO 8366 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 11:02:43.152  INFO 8366 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 11:02:43.289  INFO 8366 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 11:02:43.291  INFO 8366 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.39 seconds (JVM running for 2.672)
+2019-05-11 11:02:49.016  INFO 8366 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 11:02:49.017  INFO 8366 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 11:02:49.021  INFO 8366 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-11 11:02:49.063  INFO 8366 --- [http-nio-8085-exec-1] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@1bde4d62
+2019-05-11 11:02:49.082  INFO 8366 --- [http-nio-8085-exec-1] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@1bde4d62
+2019-05-11 11:02:49.125 ERROR 8366 --- [http-nio-8085-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 
-com.bridgelabz.fundoo.exception.LoginException: Email is not verified 
-	at com.bridgelabz.fundoo.user.service.UserServicesImplementation.login(UserServicesImplementation.java:123) ~[classes/:na]
-	at com.bridgelabz.fundoo.user.controller.UserController.login(UserController.java:55) ~[classes/:na]
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:31) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
@@ -351,40 +291,112 @@ com.bridgelabz.fundoo.exception.LoginException: Email is not verified
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
 
-2019-05-09 10:45:17.663  INFO 8139 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-05-09 10:45:17.678  INFO 8139 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-05-09 10:45:17.680  INFO 8139 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:3}] to localhost:27017 because the pool has been closed.
-2019-05-09 10:46:12.860  INFO 9571 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 9571 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
-2019-05-09 10:46:12.862  INFO 9571 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
-2019-05-09 10:46:13.267  INFO 9571 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-05-09 10:46:13.302  INFO 9571 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 1 repository interfaces.
-2019-05-09 10:46:13.620  INFO 9571 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2019-05-09 10:46:13.636  INFO 9571 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-05-09 10:46:13.636  INFO 9571 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-05-09 10:46:13.689  INFO 9571 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-05-09 10:46:13.689  INFO 9571 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 807 ms
-2019-05-09 10:46:13.882  INFO 9571 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-05-09 10:46:13.882  INFO 9571 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
-2019-05-09 10:46:13.917  INFO 9571 --- [cluster-ClusterId{value='5cd3b79d1bad0725635fa6c5', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4}] to localhost:27017
-2019-05-09 10:46:13.920  INFO 9571 --- [cluster-ClusterId{value='5cd3b79d1bad0725635fa6c5', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2103259}
-2019-05-09 10:46:13.921  INFO 9571 --- [cluster-ClusterId{value='5cd3b79d1bad0725635fa6c5', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
-2019-05-09 10:46:14.115  INFO 9571 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:5}] to localhost:27017
-2019-05-09 10:46:14.360  INFO 9571 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-05-09 10:46:14.608  INFO 9571 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2019-05-09 10:46:14.610  INFO 9571 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 1.936 seconds (JVM running for 2.202)
-2019-05-09 10:49:37.189  INFO 9571 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-05-09 10:49:37.190  INFO 9571 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-05-09 10:49:37.195  INFO 9571 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2019-05-09 10:49:37.249  WARN 9571 --- [http-nio-8085-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 3, column: 6]]
-2019-05-09 10:49:58.394  WARN 9571 --- [http-nio-8085-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 3, column: 6]]
-2019-05-09 10:50:24.273  INFO 9571 --- [http-nio-8085-exec-6] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=mohit, email=mohit1@gmail.com, password=123, mobileNumber=789456123]
-2019-05-09 10:50:24.273  INFO 9571 --- [http-nio-8085-exec-6] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=mohit, email=mohit1@gmail.com, password=123, mobileNumber=789456123]
-2019-05-09 10:50:24.466  INFO 9571 --- [http-nio-8085-exec-6] c.b.f.u.s.UserServicesImplementation     : User [userId=5cd3b8981bad0725635fa6c6, name=mohit, email=mohit1@gmail.com, password=$2a$10$Pr/eC0IvygMjeTu9Xz4X2.RQAcnDJ6fhUtN6H3.S0rgYUIco/iv.2, mobileNumber=789456123, isVarified=false, registeredDate=2019-05-09, updatedDate=null]
-2019-05-09 10:53:52.131  INFO 9571 --- [http-nio-8085-exec-9] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=mohit, email=mohit1@gmail.com, password=123, mobileNumber=789456123]
-2019-05-09 10:53:52.131  INFO 9571 --- [http-nio-8085-exec-9] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=mohit, email=mohit1@gmail.com, password=123, mobileNumber=789456123]
-2019-05-09 10:53:52.142 ERROR 9571 --- [http-nio-8085-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.bridgelabz.fundoo.exception.RegistrationException: User exist] with root cause
+2019-05-11 11:34:25.867  INFO 8366 --- [http-nio-8085-exec-4] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=admin1, email=admin1@gmail.com, password=12345, mobileNumber=787654321]
+2019-05-11 11:34:25.880  INFO 8366 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=admin1, email=admin1@gmail.com, password=12345, mobileNumber=787654321]
+2019-05-11 11:34:26.221  INFO 8366 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : User [userId=5cd665ea1bad0720aebab38b, name=admin1, email=admin1@gmail.com, password=$2a$10$WNqBllaf5p7q.Gu9lRIWbuRQhgSxk8Ao7sIU08bOgwDGcOxOwZy.., mobileNumber=787654321, isVarified=false, registeredDate=2019-05-11, updatedDate=null, notes=null]
+2019-05-11 11:34:28.394 ERROR 8366 --- [http-nio-8085-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials t65sm17652395pfa.175 - gsmtp
+] with root cause
+
+javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials t65sm17652395pfa.175 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:965) ~[javax.mail-1.6.2.jar:1.6.2]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:876) ~[javax.mail-1.6.2.jar:1.6.2]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:780) ~[javax.mail-1.6.2.jar:1.6.2]
+	at javax.mail.Service.connect(Service.java:366) ~[javax.mail-1.6.2.jar:1.6.2]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:517) ~[spring-context-support-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:436) ~[spring-context-support-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:322) ~[spring-context-support-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:311) ~[spring-context-support-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.bridgelabz.fundoo.user.service.MailService.send(MailService.java:31) ~[classes/:na]
+	at com.bridgelabz.fundoo.user.service.UserServicesImplementation.register(UserServicesImplementation.java:96) ~[classes/:na]
+	at com.bridgelabz.fundoo.user.controller.UserController.register(UserController.java:46) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+
+2019-05-11 11:34:48.486  INFO 8366 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 11:34:48.496  INFO 8366 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:34:48.501  INFO 8366 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:9}] to localhost:27017 because the pool has been closed.
+2019-05-11 11:34:49.641  INFO 9858 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 9858 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 11:34:49.643  INFO 9858 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 11:34:50.175  INFO 9858 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 11:34:50.219  INFO 9858 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 2 repository interfaces.
+2019-05-11 11:34:50.580  INFO 9858 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 11:34:50.598  INFO 9858 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 11:34:50.598  INFO 9858 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 11:34:50.670  INFO 9858 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 11:34:50.670  INFO 9858 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1006 ms
+2019-05-11 11:34:50.836  INFO 9858 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 11:34:50.836  INFO 9858 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 11:34:50.867  INFO 9858 --- [cluster-ClusterId{value='5cd666021bad0726828ff7f5', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:10}] to localhost:27017
+2019-05-11 11:34:50.870  INFO 9858 --- [cluster-ClusterId{value='5cd666021bad0726828ff7f5', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1789970}
+2019-05-11 11:34:50.871  INFO 9858 --- [cluster-ClusterId{value='5cd666021bad0726828ff7f5', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 11:34:51.058  INFO 9858 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:11}] to localhost:27017
+2019-05-11 11:34:51.425  INFO 9858 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:34:51.596  INFO 9858 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 11:34:51.606  INFO 9858 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 11:34:51.614  INFO 9858 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 11:34:51.745  INFO 9858 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 11:34:51.746  INFO 9858 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.292 seconds (JVM running for 2.583)
+2019-05-11 11:35:04.214  INFO 9858 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 11:35:04.215  INFO 9858 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 11:35:04.219  INFO 9858 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-11 11:35:04.273  INFO 9858 --- [http-nio-8085-exec-2] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=admin1, email=admin1@gmail.com, password=12345, mobileNumber=787654321]
+2019-05-11 11:35:04.273  INFO 9858 --- [http-nio-8085-exec-2] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=admin1, email=admin1@gmail.com, password=12345, mobileNumber=787654321]
+2019-05-11 11:35:04.314 ERROR 9858 --- [http-nio-8085-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.bridgelabz.fundoo.exception.RegistrationException: User exist] with root cause
 
 com.bridgelabz.fundoo.exception.RegistrationException: User exist
 	at com.bridgelabz.fundoo.user.service.UserServicesImplementation.register(UserServicesImplementation.java:72) ~[classes/:na]
@@ -444,13 +456,34 @@ com.bridgelabz.fundoo.exception.RegistrationException: User exist
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
 
-2019-05-09 10:53:58.507  INFO 9571 --- [http-nio-8085-exec-1] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=mohit1, email=mohit1@gmail.com, password=123, mobileNumber=789456123]
-2019-05-09 10:53:58.507  INFO 9571 --- [http-nio-8085-exec-1] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=mohit1, email=mohit1@gmail.com, password=123, mobileNumber=789456123]
-2019-05-09 10:53:58.511 ERROR 9571 --- [http-nio-8085-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.bridgelabz.fundoo.exception.RegistrationException: User exist] with root cause
+2019-05-11 11:36:18.458  INFO 9858 --- [http-nio-8085-exec-4] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=admin2, email=admin2@gmail.com, password=123456, mobileNumber=387654321]
+2019-05-11 11:36:18.458  INFO 9858 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=admin2, email=admin2@gmail.com, password=123456, mobileNumber=387654321]
+2019-05-11 11:36:18.585  INFO 9858 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : User [userId=5cd6665a1bad0726828ff7f6, name=admin2, email=admin2@gmail.com, password=$2a$10$fdwfz4OclMVoHWCw.Pl5L.2SeVCH5L5mNk2vYqWTYm0YrDM4YMLSa, mobileNumber=387654321, isVarified=false, registeredDate=2019-05-11, updatedDate=null, notes=null]
+2019-05-11 11:38:08.149  INFO 9858 --- [http-nio-8085-exec-7] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=rahul, email=rahul1@gmail.com, password=12345, mobileNumber=587654321]
+2019-05-11 11:38:08.150  INFO 9858 --- [http-nio-8085-exec-7] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=rahul, email=rahul1@gmail.com, password=12345, mobileNumber=587654321]
+2019-05-11 11:38:08.242  INFO 9858 --- [http-nio-8085-exec-7] c.b.f.u.s.UserServicesImplementation     : User [userId=5cd666c81bad0726828ff7f7, name=rahul, email=rahul1@gmail.com, password=$2a$10$W44YQs1TjhnmzFg4w1A38eesXKxhoi.NKOGm3XYfREs9/9n8sdHtq, mobileNumber=587654321, isVarified=false, registeredDate=2019-05-11, updatedDate=null, notes=null]
+2019-05-11 11:41:16.216  INFO 9858 --- [http-nio-8085-exec-10] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=rahul1, email=rahul11@gmail.com, password=123, mobileNumber=587654321]
+2019-05-11 11:41:16.216  INFO 9858 --- [http-nio-8085-exec-10] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=rahul1, email=rahul11@gmail.com, password=123, mobileNumber=587654321]
+2019-05-11 11:41:16.306  INFO 9858 --- [http-nio-8085-exec-10] c.b.f.u.s.UserServicesImplementation     : User [userId=5cd667841bad0726828ff7f8, name=rahul1, email=rahul11@gmail.com, password=$2a$10$Ttce2fyR62z9.emNOI0R1u.ed.sdZma/xX0NnpbooHn3cXEA15Y52, mobileNumber=587654321, isVarified=false, registeredDate=2019-05-11, updatedDate=null, notes=null]
+2019-05-11 11:48:14.364  INFO 9858 --- [http-nio-8085-exec-3] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=rahul11, email=rahul111@gmail.com, password=1234, mobileNumber=587654321]
+2019-05-11 11:48:14.364  INFO 9858 --- [http-nio-8085-exec-3] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=rahul11, email=rahul111@gmail.com, password=1234, mobileNumber=587654321]
+2019-05-11 11:48:14.456  INFO 9858 --- [http-nio-8085-exec-3] c.b.f.u.s.UserServicesImplementation     : User [userId=5cd669261bad0726828ff7f9, name=rahul11, email=rahul111@gmail.com, password=$2a$10$h9IqXSUdKLaa/NC7yrYkserIeV6D66ybPLmZt7f8qp7DizR2cZjzm, mobileNumber=587654321, isVarified=false, registeredDate=2019-05-11, updatedDate=null, notes=null]
+2019-05-11 11:48:29.197  INFO 9858 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd669261bad0726828ff7f9, name=rahul11, email=rahul111@gmail.com, password=$2a$10$h9IqXSUdKLaa/NC7yrYkserIeV6D66ybPLmZt7f8qp7DizR2cZjzm, mobileNumber=587654321, isVarified=false, registeredDate=2019-05-11, updatedDate=null, notes=null]
+2019-05-11 11:48:29.197  INFO 9858 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd669261bad0726828ff7f9, name=rahul11, email=rahul111@gmail.com, password=$2a$10$h9IqXSUdKLaa/NC7yrYkserIeV6D66ybPLmZt7f8qp7DizR2cZjzm, mobileNumber=587654321, isVarified=true, registeredDate=2019-05-11, updatedDate=2019-05-11, notes=null]
+2019-05-11 11:49:00.882  INFO 9858 --- [http-nio-8085-exec-6] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=raj, email=raj@gmail.com, password=123, mobileNumber=987654321]
+2019-05-11 11:49:00.883  INFO 9858 --- [http-nio-8085-exec-6] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=raj, email=raj@gmail.com, password=123, mobileNumber=987654321]
+2019-05-11 11:49:00.969  INFO 9858 --- [http-nio-8085-exec-6] c.b.f.u.s.UserServicesImplementation     : User [userId=5cd669541bad0726828ff7fa, name=raj, email=raj@gmail.com, password=$2a$10$4m0eytaUg8y8qnC1XHw65ed6sQ08Hc7YtpO16Ca8A9ZDN.5aNAQ1e, mobileNumber=987654321, isVarified=false, registeredDate=2019-05-11, updatedDate=null, notes=null]
+2019-05-11 11:49:23.645  INFO 9858 --- [http-nio-8085-exec-7] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd669541bad0726828ff7fa, name=raj, email=raj@gmail.com, password=$2a$10$4m0eytaUg8y8qnC1XHw65ed6sQ08Hc7YtpO16Ca8A9ZDN.5aNAQ1e, mobileNumber=987654321, isVarified=false, registeredDate=2019-05-11, updatedDate=null, notes=null]
+2019-05-11 11:49:23.646  INFO 9858 --- [http-nio-8085-exec-7] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd669541bad0726828ff7fa, name=raj, email=raj@gmail.com, password=$2a$10$4m0eytaUg8y8qnC1XHw65ed6sQ08Hc7YtpO16Ca8A9ZDN.5aNAQ1e, mobileNumber=987654321, isVarified=true, registeredDate=2019-05-11, updatedDate=2019-05-11, notes=null]
+2019-05-11 11:49:46.636  INFO 9858 --- [http-nio-8085-exec-8] c.b.f.user.controller.UserController     : LoginDTO data LoginDTO [email=raj@gmail.com, password=123]
+2019-05-11 11:49:46.638  INFO 9858 --- [http-nio-8085-exec-8] c.b.f.u.s.UserServicesImplementation     : User Password : $2a$10$4m0eytaUg8y8qnC1XHw65ed6sQ08Hc7YtpO16Ca8A9ZDN.5aNAQ1e
+2019-05-11 11:50:17.273  INFO 9858 --- [http-nio-8085-exec-9] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@d3f7b73
+2019-05-11 11:50:17.274  INFO 9858 --- [http-nio-8085-exec-9] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@d3f7b73
+2019-05-11 11:50:17.278 ERROR 9858 --- [http-nio-8085-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 
-com.bridgelabz.fundoo.exception.RegistrationException: User exist
-	at com.bridgelabz.fundoo.user.service.UserServicesImplementation.register(UserServicesImplementation.java:72) ~[classes/:na]
-	at com.bridgelabz.fundoo.user.controller.UserController.register(UserController.java:46) ~[classes/:na]
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:31) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
@@ -506,53 +539,40 @@ com.bridgelabz.fundoo.exception.RegistrationException: User exist
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
 
-2019-05-09 10:54:06.126  INFO 9571 --- [http-nio-8085-exec-3] c.b.f.user.controller.UserController     : userDTO dataUserDTO [name=mohit1, email=mohit11@gmail.com, password=123, mobileNumber=789456123]
-2019-05-09 10:54:06.126  INFO 9571 --- [http-nio-8085-exec-3] c.b.f.u.s.UserServicesImplementation     : UserDTO [name=mohit1, email=mohit11@gmail.com, password=123, mobileNumber=789456123]
-2019-05-09 10:54:06.215  INFO 9571 --- [http-nio-8085-exec-3] c.b.f.u.s.UserServicesImplementation     : User [userId=5cd3b9761bad0725635fa6c7, name=mohit1, email=mohit11@gmail.com, password=$2a$10$.metfSYW6DKnVx65VrwYP.N2.ek6tFtQXm/q13Dj9VJxDSXzdyHj6, mobileNumber=789456123, isVarified=false, registeredDate=2019-05-09, updatedDate=null]
-2019-05-09 10:54:24.873  INFO 9571 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd3b9761bad0725635fa6c7, name=mohit1, email=mohit11@gmail.com, password=$2a$10$.metfSYW6DKnVx65VrwYP.N2.ek6tFtQXm/q13Dj9VJxDSXzdyHj6, mobileNumber=789456123, isVarified=false, registeredDate=2019-05-09, updatedDate=null]
-2019-05-09 10:54:24.873  INFO 9571 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd3b9761bad0725635fa6c7, name=mohit1, email=mohit11@gmail.com, password=$2a$10$.metfSYW6DKnVx65VrwYP.N2.ek6tFtQXm/q13Dj9VJxDSXzdyHj6, mobileNumber=789456123, isVarified=true, registeredDate=2019-05-09, updatedDate=2019-05-09]
-2019-05-09 10:57:12.282  INFO 9571 --- [http-nio-8085-exec-9] c.b.f.user.controller.UserController     : LoginDTO data LoginDTO [email=mohit11@gmail.com, password=123]
-2019-05-09 10:57:12.284  INFO 9571 --- [http-nio-8085-exec-9] c.b.f.u.s.UserServicesImplementation     : User Password : $2a$10$.metfSYW6DKnVx65VrwYP.N2.ek6tFtQXm/q13Dj9VJxDSXzdyHj6
-2019-05-09 11:26:33.142  INFO 9571 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-05-09 11:26:33.151  INFO 9571 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-05-09 11:26:33.154  INFO 9571 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:5}] to localhost:27017 because the pool has been closed.
-2019-05-09 11:26:34.253  INFO 11187 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 11187 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
-2019-05-09 11:26:34.255  INFO 11187 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
-2019-05-09 11:26:34.682  INFO 11187 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-05-09 11:26:34.725  INFO 11187 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40ms. Found 1 repository interfaces.
-2019-05-09 11:26:35.051  INFO 11187 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2019-05-09 11:26:35.067  INFO 11187 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-05-09 11:26:35.067  INFO 11187 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-05-09 11:26:35.118  INFO 11187 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-05-09 11:26:35.119  INFO 11187 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 840 ms
-2019-05-09 11:26:35.285  INFO 11187 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-05-09 11:26:35.285  INFO 11187 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
-2019-05-09 11:26:35.329  INFO 11187 --- [cluster-ClusterId{value='5cd3c1131bad072bb3f8a3d3', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
-2019-05-09 11:26:35.331  INFO 11187 --- [cluster-ClusterId{value='5cd3c1131bad072bb3f8a3d3', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1601515}
-2019-05-09 11:26:35.332  INFO 11187 --- [cluster-ClusterId{value='5cd3c1131bad072bb3f8a3d3', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
-2019-05-09 11:26:35.502  INFO 11187 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:7}] to localhost:27017
-2019-05-09 11:26:35.699  INFO 11187 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-05-09 11:26:35.902  INFO 11187 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2019-05-09 11:26:35.904  INFO 11187 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 1.86 seconds (JVM running for 2.196)
-2019-05-09 11:26:52.775  INFO 11187 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-05-09 11:26:52.776  INFO 11187 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-05-09 11:26:52.783  INFO 11187 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2019-05-09 11:26:52.807  INFO 11187 --- [http-nio-8085-exec-2] c.b.f.user.controller.UserController     : User email : {
-     "email": "mohit11@gmail.com",
- 
- 
-}
-2019-05-09 11:26:52.807  INFO 11187 --- [http-nio-8085-exec-2] c.b.f.u.s.UserServicesImplementation     : Email of user is :{
-     "email": "mohit11@gmail.com",
- 
- 
-}
-2019-05-09 11:26:52.837 ERROR 11187 --- [http-nio-8085-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+2019-05-11 11:52:14.112  INFO 9858 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 11:52:14.121  INFO 9858 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:52:14.126  INFO 9858 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:11}] to localhost:27017 because the pool has been closed.
+2019-05-11 11:52:15.120  INFO 10881 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 10881 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 11:52:15.122  INFO 10881 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 11:52:15.647  INFO 10881 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 11:52:15.689  INFO 10881 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 2 repository interfaces.
+2019-05-11 11:52:16.029  INFO 10881 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 11:52:16.044  INFO 10881 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 11:52:16.044  INFO 10881 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 11:52:16.107  INFO 10881 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 11:52:16.108  INFO 10881 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 962 ms
+2019-05-11 11:52:16.260  INFO 10881 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 11:52:16.261  INFO 10881 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 11:52:16.291  INFO 10881 --- [cluster-ClusterId{value='5cd66a181bad072a815e4367', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:12}] to localhost:27017
+2019-05-11 11:52:16.294  INFO 10881 --- [cluster-ClusterId{value='5cd66a181bad072a815e4367', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1666866}
+2019-05-11 11:52:16.295  INFO 10881 --- [cluster-ClusterId{value='5cd66a181bad072a815e4367', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 11:52:16.484  INFO 10881 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:13}] to localhost:27017
+2019-05-11 11:52:16.872  INFO 10881 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:52:17.050  INFO 10881 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 11:52:17.060  INFO 10881 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 11:52:17.068  INFO 10881 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 11:52:17.208  INFO 10881 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 11:52:17.209  INFO 10881 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.294 seconds (JVM running for 2.588)
+2019-05-11 11:52:50.715  INFO 10881 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 11:52:50.716  INFO 10881 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 11:52:50.721  INFO 10881 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-05-11 11:52:50.762  INFO 10881 --- [http-nio-8085-exec-2] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@378364c5
+2019-05-11 11:52:50.781  INFO 10881 --- [http-nio-8085-exec-2] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@378364c5
+2019-05-11 11:52:50.834 ERROR 10881 --- [http-nio-8085-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 
-java.util.NoSuchElementException: No value present
-	at java.util.Optional.get(Optional.java:135) ~[na:1.8.0_191]
-	at com.bridgelabz.fundoo.user.service.UserServicesImplementation.forgotPassword(UserServicesImplementation.java:162) ~[classes/:na]
-	at com.bridgelabz.fundoo.user.controller.UserController.forgotPassword(UserController.java:69) ~[classes/:na]
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:31) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
@@ -608,22 +628,13 @@ java.util.NoSuchElementException: No value present
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
 
-2019-05-09 11:26:57.375  INFO 11187 --- [http-nio-8085-exec-4] c.b.f.user.controller.UserController     : User email : {
-     "email": "mohit11@gmail.com"
- 
- 
-}
-2019-05-09 11:26:57.375  INFO 11187 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : Email of user is :{
-     "email": "mohit11@gmail.com"
- 
- 
-}
-2019-05-09 11:26:57.377 ERROR 11187 --- [http-nio-8085-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+2019-05-11 11:52:52.741  INFO 10881 --- [http-nio-8085-exec-4] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@584e9813
+2019-05-11 11:52:52.745  INFO 10881 --- [http-nio-8085-exec-4] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@584e9813
+2019-05-11 11:52:52.752 ERROR 10881 --- [http-nio-8085-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 
-java.util.NoSuchElementException: No value present
-	at java.util.Optional.get(Optional.java:135) ~[na:1.8.0_191]
-	at com.bridgelabz.fundoo.user.service.UserServicesImplementation.forgotPassword(UserServicesImplementation.java:162) ~[classes/:na]
-	at com.bridgelabz.fundoo.user.controller.UserController.forgotPassword(UserController.java:69) ~[classes/:na]
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:31) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
@@ -679,33 +690,484 @@ java.util.NoSuchElementException: No value present
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
 
-2019-05-09 11:28:38.215  INFO 11187 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-05-09 11:28:38.218  INFO 11187 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-05-09 11:28:38.220  INFO 11187 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:7}] to localhost:27017 because the pool has been closed.
-2019-05-09 11:28:47.289  INFO 11326 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 11326 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
-2019-05-09 11:28:47.291  INFO 11326 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
-2019-05-09 11:28:47.661  INFO 11326 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-05-09 11:28:47.698  INFO 11326 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
-2019-05-09 11:28:48.049  INFO 11326 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2019-05-09 11:28:48.066  INFO 11326 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-05-09 11:28:48.066  INFO 11326 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-05-09 11:28:48.120  INFO 11326 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-05-09 11:28:48.120  INFO 11326 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 810 ms
-2019-05-09 11:28:48.295  INFO 11326 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-05-09 11:28:48.296  INFO 11326 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
-2019-05-09 11:28:48.342  INFO 11326 --- [cluster-ClusterId{value='5cd3c1981bad072c3e5b4635', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
-2019-05-09 11:28:48.344  INFO 11326 --- [cluster-ClusterId{value='5cd3c1981bad072c3e5b4635', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1805417}
-2019-05-09 11:28:48.345  INFO 11326 --- [cluster-ClusterId{value='5cd3c1981bad072c3e5b4635', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
-2019-05-09 11:28:48.530  INFO 11326 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:9}] to localhost:27017
-2019-05-09 11:28:48.764  INFO 11326 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-05-09 11:28:48.973  INFO 11326 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2019-05-09 11:28:48.974  INFO 11326 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 1.872 seconds (JVM running for 2.13)
-2019-05-09 11:30:26.481  INFO 11326 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-05-09 11:30:26.482  INFO 11326 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-05-09 11:30:26.488  INFO 11326 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2019-05-09 11:30:26.506  INFO 11326 --- [http-nio-8085-exec-1] c.b.f.user.controller.UserController     : User email : mohit11@gmail.com
-2019-05-09 11:30:26.506  INFO 11326 --- [http-nio-8085-exec-1] c.b.f.u.s.UserServicesImplementation     : Email of user is :mohit11@gmail.com
-2019-05-09 11:30:56.271  WARN 11326 --- [http-nio-8085-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2019-05-09 14:31:48.371  INFO 11326 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-05-09 14:31:48.388  INFO 11326 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-05-09 14:31:48.389  INFO 11326 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:9}] to localhost:27017 because the pool has been closed.
+2019-05-11 11:53:35.399  INFO 10881 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 11:53:35.411  INFO 10881 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:53:35.415  INFO 10881 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:13}] to localhost:27017 because the pool has been closed.
+2019-05-11 11:53:36.414  INFO 10987 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 10987 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 11:53:36.417  INFO 10987 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 11:53:36.948  INFO 10987 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 11:53:36.990  INFO 10987 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 2 repository interfaces.
+2019-05-11 11:53:37.316  INFO 10987 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 11:53:37.333  INFO 10987 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 11:53:37.333  INFO 10987 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 11:53:37.395  INFO 10987 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 11:53:37.395  INFO 10987 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 952 ms
+2019-05-11 11:53:37.550  INFO 10987 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 11:53:37.550  INFO 10987 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 11:53:37.578  INFO 10987 --- [cluster-ClusterId{value='5cd66a691bad072aebb61ddb', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:14}] to localhost:27017
+2019-05-11 11:53:37.581  INFO 10987 --- [cluster-ClusterId{value='5cd66a691bad072aebb61ddb', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1530515}
+2019-05-11 11:53:37.581  INFO 10987 --- [cluster-ClusterId{value='5cd66a691bad072aebb61ddb', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 11:53:37.754  INFO 10987 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:15}] to localhost:27017
+2019-05-11 11:53:38.137  INFO 10987 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:53:38.321  INFO 10987 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 11:53:38.331  INFO 10987 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 11:53:38.340  INFO 10987 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 11:53:38.478  INFO 10987 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 11:53:38.479  INFO 10987 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.272 seconds (JVM running for 2.577)
+2019-05-11 11:53:45.681  INFO 10987 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 11:53:45.681  INFO 10987 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 11:53:45.687  INFO 10987 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-05-11 11:53:45.726  INFO 10987 --- [http-nio-8085-exec-2] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@12898d15
+2019-05-11 11:53:45.747  INFO 10987 --- [http-nio-8085-exec-2] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@12898d15
+2019-05-11 11:53:45.795 ERROR 10987 --- [http-nio-8085-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:31) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+
+2019-05-11 11:55:48.093  INFO 10987 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 11:55:48.098  INFO 10987 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:55:48.100  INFO 10987 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:15}] to localhost:27017 because the pool has been closed.
+2019-05-11 11:55:49.109  INFO 11120 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 11120 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 11:55:49.110  INFO 11120 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 11:55:49.653  INFO 11120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 11:55:49.696  INFO 11120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 2 repository interfaces.
+2019-05-11 11:55:50.054  INFO 11120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 11:55:50.072  INFO 11120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 11:55:50.072  INFO 11120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 11:55:50.144  INFO 11120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 11:55:50.144  INFO 11120 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1012 ms
+2019-05-11 11:55:50.308  INFO 11120 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 11:55:50.308  INFO 11120 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 11:55:50.338  INFO 11120 --- [cluster-ClusterId{value='5cd66aee1bad072b70c1697d', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:16}] to localhost:27017
+2019-05-11 11:55:50.340  INFO 11120 --- [cluster-ClusterId{value='5cd66aee1bad072b70c1697d', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1698363}
+2019-05-11 11:55:50.341  INFO 11120 --- [cluster-ClusterId{value='5cd66aee1bad072b70c1697d', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 11:55:50.516  INFO 11120 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:17}] to localhost:27017
+2019-05-11 11:55:50.876  INFO 11120 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:55:51.044  INFO 11120 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 11:55:51.055  INFO 11120 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 11:55:51.062  INFO 11120 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 11:55:51.191  INFO 11120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 11:55:51.193  INFO 11120 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.295 seconds (JVM running for 2.583)
+2019-05-11 11:56:00.002  INFO 11120 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 11:56:00.002  INFO 11120 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 11:56:00.008  INFO 11120 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-05-11 11:56:00.047  INFO 11120 --- [http-nio-8085-exec-2] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@305f043a
+2019-05-11 11:56:00.066  INFO 11120 --- [http-nio-8085-exec-2] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@305f043a
+2019-05-11 11:56:00.111 ERROR 11120 --- [http-nio-8085-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:33) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+
+2019-05-11 11:57:33.662  INFO 11120 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 11:57:33.667  INFO 11120 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:57:33.670  INFO 11120 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:17}] to localhost:27017 because the pool has been closed.
+2019-05-11 11:57:34.703  INFO 11254 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 11254 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 11:57:34.705  INFO 11254 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 11:57:35.235  INFO 11254 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 11:57:35.278  INFO 11254 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 2 repository interfaces.
+2019-05-11 11:57:35.631  INFO 11254 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 11:57:35.649  INFO 11254 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 11:57:35.649  INFO 11254 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 11:57:35.719  INFO 11254 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 11:57:35.719  INFO 11254 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 991 ms
+2019-05-11 11:57:35.883  INFO 11254 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 11:57:35.883  INFO 11254 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 11:57:35.913  INFO 11254 --- [cluster-ClusterId{value='5cd66b571bad072bf6b98b6f', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:18}] to localhost:27017
+2019-05-11 11:57:35.916  INFO 11254 --- [cluster-ClusterId{value='5cd66b571bad072bf6b98b6f', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1770357}
+2019-05-11 11:57:35.916  INFO 11254 --- [cluster-ClusterId{value='5cd66b571bad072bf6b98b6f', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 11:57:36.085  INFO 11254 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:19}] to localhost:27017
+2019-05-11 11:57:36.448  INFO 11254 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 11:57:36.619  INFO 11254 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 11:57:36.629  INFO 11254 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 11:57:36.636  INFO 11254 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 11:57:36.762  INFO 11254 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 11:57:36.764  INFO 11254 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.288 seconds (JVM running for 2.604)
+2019-05-11 11:57:43.595  INFO 11254 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 11:57:43.596  INFO 11254 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 11:57:43.600  INFO 11254 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-11 11:57:43.639  INFO 11254 --- [http-nio-8085-exec-2] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@26fe070
+2019-05-11 11:57:43.657  INFO 11254 --- [http-nio-8085-exec-2] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@26fe070
+2019-05-11 11:57:43.701 ERROR 11254 --- [http-nio-8085-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:33) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+
+2019-05-11 12:06:06.261  INFO 11254 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 12:06:06.266  INFO 11254 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 12:06:06.268  INFO 11254 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:19}] to localhost:27017 because the pool has been closed.
+2019-05-11 12:06:18.282  INFO 11808 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 11808 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 12:06:18.284  INFO 11808 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 12:06:18.791  INFO 11808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 12:06:18.832  INFO 11808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 2 repository interfaces.
+2019-05-11 12:06:19.186  INFO 11808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 12:06:19.203  INFO 11808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 12:06:19.203  INFO 11808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 12:06:19.259  INFO 11808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 12:06:19.260  INFO 11808 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 956 ms
+2019-05-11 12:06:19.429  INFO 11808 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 12:06:19.429  INFO 11808 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 12:06:19.464  INFO 11808 --- [cluster-ClusterId{value='5cd66d631bad072e20ee5494', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:20}] to localhost:27017
+2019-05-11 12:06:19.467  INFO 11808 --- [cluster-ClusterId{value='5cd66d631bad072e20ee5494', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1847950}
+2019-05-11 12:06:19.467  INFO 11808 --- [cluster-ClusterId{value='5cd66d631bad072e20ee5494', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 12:06:19.672  INFO 11808 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:21}] to localhost:27017
+2019-05-11 12:06:20.048  INFO 11808 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 12:06:20.222  INFO 11808 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 12:06:20.231  INFO 11808 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 12:06:20.239  INFO 11808 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 12:06:20.354  INFO 11808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 12:06:20.356  INFO 11808 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.267 seconds (JVM running for 2.567)
+2019-05-11 12:06:39.534  INFO 11808 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 12:06:39.534  INFO 11808 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 12:06:39.538  INFO 11808 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-11 12:06:39.578  INFO 11808 --- [http-nio-8085-exec-1] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@54cf9ab8
+2019-05-11 12:06:39.596  INFO 11808 --- [http-nio-8085-exec-1] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@54cf9ab8
+2019-05-11 12:06:39.643 ERROR 11808 --- [http-nio-8085-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:60) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:33) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+
+2019-05-11 12:11:58.621  INFO 11808 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 12:11:58.627  INFO 11808 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 12:11:58.630  INFO 11808 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:21}] to localhost:27017 because the pool has been closed.
+2019-05-11 12:12:00.098  INFO 12266 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 12266 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 12:12:00.100  INFO 12266 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 12:12:00.633  INFO 12266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 12:12:00.678  INFO 12266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 2 repository interfaces.
+2019-05-11 12:12:01.028  INFO 12266 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 12:12:01.044  INFO 12266 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 12:12:01.044  INFO 12266 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 12:12:01.111  INFO 12266 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 12:12:01.111  INFO 12266 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 989 ms
+2019-05-11 12:12:01.275  INFO 12266 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 12:12:01.275  INFO 12266 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 12:12:01.306  INFO 12266 --- [cluster-ClusterId{value='5cd66eb91bad072fea744ade', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:22}] to localhost:27017
+2019-05-11 12:12:01.309  INFO 12266 --- [cluster-ClusterId{value='5cd66eb91bad072fea744ade', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1644386}
+2019-05-11 12:12:01.310  INFO 12266 --- [cluster-ClusterId{value='5cd66eb91bad072fea744ade', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 12:12:01.504  INFO 12266 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:23}] to localhost:27017
+2019-05-11 12:12:01.902  INFO 12266 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 12:12:02.099  INFO 12266 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 12:12:02.110  INFO 12266 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 12:12:02.119  INFO 12266 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 12:12:02.263  INFO 12266 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 12:12:02.265  INFO 12266 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.37 seconds (JVM running for 2.68)
+2019-05-11 12:12:07.271  INFO 12266 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 12:12:07.271  INFO 12266 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 12:12:07.278  INFO 12266 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-05-11 12:12:07.317  INFO 12266 --- [http-nio-8085-exec-1] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@7111476
+2019-05-11 12:12:07.337  INFO 12266 --- [http-nio-8085-exec-1] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@7111476
+2019-05-11 12:12:07.643 ERROR 12266 --- [http-nio-8085-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.bridgelabz.fundoo.notes.service.NotesServiceImpl.createNote(NotesServiceImpl.java:70) ~[classes/:na]
+	at com.bridgelabz.fundoo.notes.controller.NotesController.creatingNote(NotesController.java:33) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+
+2019-05-11 12:12:46.164  INFO 12266 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 12:12:46.173  INFO 12266 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 12:12:46.178  INFO 12266 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:23}] to localhost:27017 because the pool has been closed.
+2019-05-11 12:12:47.163  INFO 12381 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 12381 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-11 12:12:47.165  INFO 12381 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-11 12:12:47.648  INFO 12381 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-11 12:12:47.686  INFO 12381 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 2 repository interfaces.
+2019-05-11 12:12:48.006  INFO 12381 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-11 12:12:48.021  INFO 12381 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-11 12:12:48.021  INFO 12381 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-11 12:12:48.084  INFO 12381 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-11 12:12:48.084  INFO 12381 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 898 ms
+2019-05-11 12:12:48.254  INFO 12381 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-11 12:12:48.254  INFO 12381 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-11 12:12:48.286  INFO 12381 --- [cluster-ClusterId{value='5cd66ee81bad07305d7a5730', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:24}] to localhost:27017
+2019-05-11 12:12:48.288  INFO 12381 --- [cluster-ClusterId{value='5cd66ee81bad07305d7a5730', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1536813}
+2019-05-11 12:12:48.289  INFO 12381 --- [cluster-ClusterId{value='5cd66ee81bad07305d7a5730', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-11 12:12:48.484  INFO 12381 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:25}] to localhost:27017
+2019-05-11 12:12:48.889  INFO 12381 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-11 12:12:49.080  INFO 12381 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-11 12:12:49.091  INFO 12381 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-11 12:12:49.100  INFO 12381 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-11 12:12:49.234  INFO 12381 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-11 12:12:49.235  INFO 12381 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.262 seconds (JVM running for 2.572)
+2019-05-11 12:12:53.239  INFO 12381 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-11 12:12:53.239  INFO 12381 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-11 12:12:53.246  INFO 12381 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-05-11 12:12:53.286  INFO 12381 --- [http-nio-8085-exec-2] c.b.f.notes.controller.NotesController   : com.bridgelabz.fundoo.notes.dto.NotesDto@2e5d1f4c
+2019-05-11 12:12:53.305  INFO 12381 --- [http-nio-8085-exec-2] c.b.f.notes.service.NotesServiceImpl     : com.bridgelabz.fundoo.notes.dto.NotesDto@2e5d1f4c
+2019-05-11 12:37:26.159  INFO 12381 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd669541bad0726828ff7fa, name=raj, email=raj@gmail.com, password=$2a$10$4m0eytaUg8y8qnC1XHw65ed6sQ08Hc7YtpO16Ca8A9ZDN.5aNAQ1e, mobileNumber=987654321, isVarified=true, registeredDate=2019-05-11, updatedDate=2019-05-11, notes=[Note [id=5cd66eed1bad07305d7a5731, userId=5cd669541bad0726828ff7fa, title=tab1, description=this is table 1, isPin=false, isArchive=false, isTrash=false, created=2019-05-11T12:12:53.349, modified=2019-05-11T12:12:53.349]]]
+2019-05-11 12:37:26.159  INFO 12381 --- [http-nio-8085-exec-4] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd669541bad0726828ff7fa, name=raj, email=raj@gmail.com, password=$2a$10$4m0eytaUg8y8qnC1XHw65ed6sQ08Hc7YtpO16Ca8A9ZDN.5aNAQ1e, mobileNumber=987654321, isVarified=true, registeredDate=2019-05-11, updatedDate=2019-05-11, notes=[Note [id=5cd66eed1bad07305d7a5731, userId=5cd669541bad0726828ff7fa, title=tab1, description=this is table 1, isPin=false, isArchive=false, isTrash=false, created=2019-05-11T12:12:53.349, modified=2019-05-11T12:12:53.349]]]
+2019-05-11 12:37:29.226  INFO 12381 --- [http-nio-8085-exec-5] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd669541bad0726828ff7fa, name=raj, email=raj@gmail.com, password=$2a$10$4m0eytaUg8y8qnC1XHw65ed6sQ08Hc7YtpO16Ca8A9ZDN.5aNAQ1e, mobileNumber=987654321, isVarified=true, registeredDate=2019-05-11, updatedDate=2019-05-11, notes=[Note [id=5cd66eed1bad07305d7a5731, userId=5cd669541bad0726828ff7fa, title=tab1, description=this is table 1, isPin=false, isArchive=false, isTrash=false, created=2019-05-11T12:12:53.349, modified=2019-05-11T12:12:53.349]]]
+2019-05-11 12:37:29.226  INFO 12381 --- [http-nio-8085-exec-5] c.b.f.u.s.UserServicesImplementation     : User : User [userId=5cd669541bad0726828ff7fa, name=raj, email=raj@gmail.com, password=$2a$10$4m0eytaUg8y8qnC1XHw65ed6sQ08Hc7YtpO16Ca8A9ZDN.5aNAQ1e, mobileNumber=987654321, isVarified=true, registeredDate=2019-05-11, updatedDate=2019-05-11, notes=[Note [id=5cd66eed1bad07305d7a5731, userId=5cd669541bad0726828ff7fa, title=tab1, description=this is table 1, isPin=false, isArchive=false, isTrash=false, created=2019-05-11T12:12:53.349, modified=2019-05-11T12:12:53.349]]]
+2019-05-11 12:41:42.024  INFO 12381 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-11 12:41:42.029  INFO 12381 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-11 12:41:42.031  INFO 12381 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:25}] to localhost:27017 because the pool has been closed.
