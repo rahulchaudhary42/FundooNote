@@ -117,6 +117,21 @@ public class NotesServiceImpl implements INotesService{
 		Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashError"),Integer.parseInt(environment.getProperty("status.note.errorCode")));
 		return response;
 	}
+
+	@Override
+	public List<NotesDto> getAllNotes(String token) {
+		String id = userToken.tokenVerify(token);
+		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
+		List<NotesDto> listNotes = new ArrayList<>();
+		for(Note userNotes : notes) {
+			NotesDto notesDto = modelMapper.map(userNotes, NotesDto.class);
+			if(userNotes.isArchive() == false && userNotes.isTrash() == false) {
+				listNotes.add(notesDto);
+				
+			}
+		}
+		return listNotes;
+	}
 	
 	
 

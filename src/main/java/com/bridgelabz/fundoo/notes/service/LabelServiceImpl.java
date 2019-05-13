@@ -85,4 +85,66 @@ public class LabelServiceImpl implements ILabelService{
 		return response;
 	}
 
+	@Override
+	public Response deleteLabel(String labelId, String token) {
+		String userId = userToken.tokenVerify(token);
+		Optional<User> user = userRepository.findById(userId);
+		if(!user.isPresent()) {
+			throw new LabelException("Invalid input", -6);
+		}
+		Label label = labelRepository.findByLabelIdAndUserId(labelId, userId);
+		if(label == null) {
+			throw new LabelException("Invalid input", -6);
+		}
+		labelRepository.delete(label);
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.label.deleted"), Integer.parseInt(environment.getProperty("status.success.code")));
+		return response;
+
+	}
+
+	@Override
+	public Response updateLabel(String labelId, String token, LabelDto labelDto) {
+		
+		System.out.println("------------------------------------------------");
+		  System.out.println(labelDto.getLabelName());
+		String userId = userToken.tokenVerify(token);
+		Optional<User> user = userRepository.findById(userId);
+		if(!user.isPresent()) {
+			throw new LabelException("Invalid input", -6);
+		}
+		Label label = labelRepository.findByLabelIdAndUserId(labelId, userId);
+		if(label == null ) {
+			throw new LabelException("No label exist", -6);
+		}
+		if(labelDto.getLabelName().isEmpty()) {
+			throw new LabelException("Label has no name", -6);
+		}
+		Optional<Label> labelAvailability = labelRepository.findByUserIdAndLabelName(userId, labelDto.getLabelName());
+		if(labelAvailability.isPresent()) {
+			throw new LabelException("Label already exist", -6);
+		}
+		label.setLabelName(labelDto.getLabelName());
+		label.setModifiedDate(LocalDateTime.now());
+		labelRepository.save(label);
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.label.updated"), Integer.parseInt(environment.getProperty("status.success.code")));
+		return response;
+	}
+
+	@Override
+	public List<LabelDto> getAllLabel(String token) {
+		String userId = userToken.tokenVerify(token);
+		Optional<User> user = userRepository.findById(userId);
+		if(!user.isPresent()) {
+			throw new LabelException("Invalid input", -6);
+		}
+		
+		List<Label> labels = labelRepository.findByUserId(userId);
+		List<LabelDto> listLabel = new ArrayList<>();
+		for(Label noteLabel : labels) {
+			LabelDto labelDto = modelMapper.map(noteLabel, LabelDto.class);
+			listLabel.add(labelDto);
+		}
+		return listLabel;
+	}
+
 }

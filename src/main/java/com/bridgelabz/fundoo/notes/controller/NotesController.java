@@ -1,4 +1,6 @@
 package com.bridgelabz.fundoo.notes.controller;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -7,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
- 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -48,6 +50,12 @@ public class NotesController {
 	public ResponseEntity<Response> deletingNote(@RequestHeader String token ,@RequestParam String id){
 		Response responseStatus = noteService.delete(token, id);
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
+	}
+	
+	@GetMapping("/getallnotes")
+	public List<NotesDto>  getAllNotes(@RequestHeader String token) {
+		List<NotesDto> listnotes = noteService.getAllNotes(token);
+		return listnotes;
 	}
 	
 	
