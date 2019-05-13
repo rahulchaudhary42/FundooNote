@@ -6,6 +6,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.bridgelabz.fundoo.notes.model.Label;
 import com.bridgelabz.fundoo.notes.model.Note;
 
 @Document(collection="usertab")
@@ -16,8 +18,6 @@ public class User {
 	private String name;
 	@Indexed(unique=true)
 	private String email;
-
-
 	private String password;
 	private String mobileNumber;
 	boolean isVarified;
@@ -26,7 +26,9 @@ public class User {
 	
 	@DBRef
 	private List<Note> notes;
-
+	
+	@DBRef
+	private List<Label> label;
 
 	public User() {
 		super();
@@ -102,13 +104,24 @@ public class User {
 	public void setNotes(List<Note> notes) {
 		this.notes = notes;
 	}
- 
+	
+
+	public List<Label> getLabel() {
+		return label;
+	}
+
+	public void setLabel(List<Label> label) {
+		this.label = label;
+	}
+
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", password=" + password
 				+ ", mobileNumber=" + mobileNumber + ", isVarified=" + isVarified + ", registeredDate=" + registeredDate
-				+ ", updatedDate=" + updatedDate + ", notes=" + notes + "]";
+				+ ", updatedDate=" + updatedDate + ", notes=" + notes + ", label=" + label + "]";
 	}
+ 
+	 
  
 	 
 	
