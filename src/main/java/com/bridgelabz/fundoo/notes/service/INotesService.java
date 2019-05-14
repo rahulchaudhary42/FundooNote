@@ -18,5 +18,7 @@ public interface INotesService {
 	
 	public List<NotesDto>  getAllNotes(String token);
 	
+	public Response archiveAndUnArchive(String token, String noteId);
+	
 	
 }

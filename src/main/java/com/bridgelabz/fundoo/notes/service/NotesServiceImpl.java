@@ -132,6 +132,12 @@ public class NotesServiceImpl implements INotesService{
 		}
 		return listNotes;
 	}
+
+	@Override
+	public Response archiveAndUnArchive(String token, String noteId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

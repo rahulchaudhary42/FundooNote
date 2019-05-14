@@ -16,10 +16,6 @@ public class Label {
 	private LocalDateTime modifiedDate;
 	private List<Note> notes;
 	private String userId;
-	
-	
-	 
-
 
 	public Label() {
 		super();
@@ -65,7 +61,6 @@ public class Label {
 		this.notes = notes;
 	}
 	
-
 	public String getUserId() {
 		return userId;
 	}
@@ -80,9 +75,4 @@ public class Label {
 				+ ", modifiedDate=" + modifiedDate + ", notes=" + notes + ", userId=" + userId + "]";
 	}
 
-    
-
-	 
-
-	
 }

@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.bridgelabz.fundoo.notes.model.Label;
 import com.bridgelabz.fundoo.notes.model.Note;
 
-@Document(collection="usertab")
+@Document(collection="user")
 public class User {
 
 	  @Id
