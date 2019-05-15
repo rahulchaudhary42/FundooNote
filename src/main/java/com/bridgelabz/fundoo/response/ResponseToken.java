@@ -2,6 +2,7 @@ package com.bridgelabz.fundoo.response;
 
 import org.springframework.stereotype.Component;
 
+// Response Token Class
 @Component
 public class ResponseToken {
 	

@@ -1,5 +1,6 @@
 package com.bridgelabz.fundoo.exception;
 
+// Login Exception Class
 public class LoginException extends RuntimeException{
 	
 	private static final long serialVersionUID = 1L;

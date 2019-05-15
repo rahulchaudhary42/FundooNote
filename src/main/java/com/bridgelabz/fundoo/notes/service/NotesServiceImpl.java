@@ -25,97 +25,141 @@ import com.bridgelabz.fundoo.util.UserToken;
 
 @Service("notesService")
 @PropertySource("classpath:message.properties")
-public class NotesServiceImpl implements INotesService{
-	
+public class NotesServiceImpl implements INotesService {
+
 	Logger logger = LoggerFactory.getLogger(NotesServiceImpl.class);
-	
+
 	@Autowired
 	private UserToken userToken;
-	
+
 	@Autowired
 	private IUserRepository userRepository;
-	
+
 	@Autowired
 	private ModelMapper modelMapper;
-	
+
 	@Autowired
 	private INotesRepository notesRepository;
-	
+
 	@Autowired
 	private Environment environment;
 
 	@Override
 	public Response createNote(NotesDto notesDto, String token) {
-		System.out.println(notesDto.getTitle()+"\t"+notesDto.getDescription());
+		System.out.println(notesDto.getTitle() + "\t" + notesDto.getDescription());
 		String id = userToken.tokenVerify(token);
 		logger.info(notesDto.toString());
-		if(notesDto.getTitle().isEmpty() && notesDto.getDescription().isEmpty()) {
-			
+		
+		if (notesDto.getTitle().isEmpty() && notesDto.getDescription().isEmpty()) {
 			throw new NotesException("Title and description are empty", -5);
-
 		}
+		
 		Note note = modelMapper.map(notesDto, Note.class);
 		Optional<User> user = userRepository.findById(id);
-		
-		if(!user.isPresent())
+
+		if (!user.isPresent())
 			System.out.print("No user Found");
-			// throw exception
+		// throw exception
 		note.setUserId(id);
 		note.setCreated(LocalDateTime.now());
 		note.setModified(LocalDateTime.now());
 		note = notesRepository.save(note);
-		
+
 		List<Note> notes = user.get().getNotes();
-		
-		if(!(notes == null)) {
+
+		if (!(notes == null)) {
 			notes.add(note);
 			user.get().setNotes(notes);
-		}else {
-			notes= new ArrayList<Note>();
+		} else {
+			notes = new ArrayList<Note>();
 			notes.add(note);
 			user.get().setNotes(notes);
 		}
-		
-		
-		
+
 		userRepository.save(user.get());
-		Response response = StatusHelper.statusInfo(environment.getProperty("status.notes.createdSuccessfull"), Integer.parseInt(environment.getProperty("status.success.code")));
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.notes.createdSuccessfull"),
+				Integer.parseInt(environment.getProperty("status.success.code")));
 		return response;
 	}
-	
+
 	@Override
-	public Response updateNote(NotesDto notesDto , String token , String id) {
-		if(notesDto.getTitle().isEmpty() && notesDto.getDescription().isEmpty()) {
+	public Response updateNote(NotesDto notesDto, String token, String id) {
+		if (notesDto.getTitle().isEmpty() && notesDto.getDescription().isEmpty()) {
 			throw new NotesException("Title and description are empty", -5);
 		}
-		
+
 		String ide = userToken.tokenVerify(token);
 		Note notes = notesRepository.findByIdAndUserId(id, ide);
 		notes.setTitle(notesDto.getTitle());
 		notes.setDescription(notesDto.getDescription());
 		notes.setModified(LocalDateTime.now());
 		notesRepository.save(notes);
-		Response response = StatusHelper.statusInfo(environment.getProperty("status.notes.updated"),Integer.parseInt(environment.getProperty("status.success.code")));
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.notes.updated"),
+				Integer.parseInt(environment.getProperty("status.success.code")));
 		return response;
 	}
 
- 
 	@Override
 	public Response delete(String token, String id) {
+		String ide = userToken.tokenVerify(token);
+		Note notes = notesRepository.findByIdAndUserId(id, ide);
+		if (notes == null) {
+			throw new NotesException("Invalid input", -5);
+		}
+		if (notes.isTrash() == false) {
+			notes.setTrash(true);
+			notes.setModified(LocalDateTime.now());
+			notesRepository.save(notes);
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashed"),
+					Integer.parseInt(environment.getProperty("status.success.code")));
+			return response;
+		}
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashError"),
+				Integer.parseInt(environment.getProperty("status.note.errorCode")));
+		return response;
+	}
+
+	@Override
+	public Response pinAndUnPin(String token, String id) {
+		String ide = userToken.tokenVerify(token);
+		Note notes = notesRepository.findByIdAndUserId(id, ide);
+		if (notes == null) {
+			throw new NotesException("Invalid input", -5);
+		}
+		if (notes.isPin() == false) {
+			notes.setPin(true);
+			notesRepository.save(notes);
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.pinned"),
+					Integer.parseInt(environment.getProperty("status.success.code")));
+			return response;
+		} else {
+			notes.setPin(false);
+			notesRepository.save(notes);
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.unpinned"),
+					Integer.parseInt(environment.getProperty("status.success.code")));
+			return response;
+		}
+	}
+	
+	@Override
+	public Response archiveAndUnArchive(String token, String id) {
 		String ide = userToken.tokenVerify(token);
 		Note notes = notesRepository.findByIdAndUserId(id, ide);
 		if(notes == null) {
 			throw new NotesException("Invalid input", -5);
 		}
-		if(notes.isTrash() == false) {
-			notes.setTrash(true);
-			notes.setModified(LocalDateTime.now());
+		if(notes.isArchive() == false) {
+			notes.setArchive(true);
 			notesRepository.save(notes);
-			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashed"),Integer.parseInt(environment.getProperty("status.success.code")));
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.archieved"),Integer.parseInt(environment.getProperty("status.success.code")));
 			return response;
 		}
-		Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashError"),Integer.parseInt(environment.getProperty("status.note.errorCode")));
-		return response;
+		else {
+			notes.setArchive(false);
+			notesRepository.save(notes);
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.unarchieved"),Integer.parseInt(environment.getProperty("status.success.code")));
+			return response;
+		}
 	}
 
 	@Override
@@ -123,22 +167,33 @@ public class NotesServiceImpl implements INotesService{
 		String id = userToken.tokenVerify(token);
 		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
 		List<NotesDto> listNotes = new ArrayList<>();
-		for(Note userNotes : notes) {
+		for (Note userNotes : notes) {
 			NotesDto notesDto = modelMapper.map(userNotes, NotesDto.class);
-			if(userNotes.isArchive() == false && userNotes.isTrash() == false) {
+			if (userNotes.isArchive() == false && userNotes.isTrash() == false) {
 				listNotes.add(notesDto);
-				
 			}
 		}
 		return listNotes;
 	}
 
 	@Override
-	public Response archiveAndUnArchive(String token, String noteId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Response trashAndUnTrash(String token, String id) {
+		String ide = userToken.tokenVerify(token);
+		Note notes = notesRepository.findByIdAndUserId(id, ide);
+		if(notes.isTrash() == false) {
+			notes.setTrash(true);
+			notesRepository.save(notes);
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashed"),Integer.parseInt(environment.getProperty("status.success.code")));
+			return response;
+		}
+		else {
+			notes.setTrash(false);
+			notesRepository.save(notes);
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.untrashed"),Integer.parseInt(environment.getProperty("status.success.code")));
+			return response;
+		}
 	}
-	
-	
+
+
 
 }

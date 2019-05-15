@@ -1,5 +1,6 @@
 package com.bridgelabz.fundoo.exception;
 
+//Email Exception Class
 public class EmailException extends RuntimeException{
 
 	private static final long serialVersionUID = 1L;
@@ -16,3 +17,4 @@ public class EmailException extends RuntimeException{
 	}
 	
 }
+

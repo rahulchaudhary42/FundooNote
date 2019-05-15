@@ -1,7 +1,8 @@
 package com.bridgelabz.fundoo.response;
 
 import org.springframework.stereotype.Component;
-   //Response class for Fundoo Backend
+
+   //Response class 
 	@Component
 	public class Response {
 		

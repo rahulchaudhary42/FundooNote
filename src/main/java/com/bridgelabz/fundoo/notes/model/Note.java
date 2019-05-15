@@ -2,6 +2,7 @@ package com.bridgelabz.fundoo.notes.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -20,6 +21,7 @@ public class Note implements Serializable{
 	private boolean isTrash;
 	private LocalDateTime created;
 	private LocalDateTime modified;
+     List<Boolean> note;
  
 	
 	public Note() {

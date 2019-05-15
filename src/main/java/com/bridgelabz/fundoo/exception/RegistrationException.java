@@ -1,5 +1,6 @@
 package com.bridgelabz.fundoo.exception;
 
+// Registration Exception Class
 public class RegistrationException extends RuntimeException{
 	
 	private static final long serialVersionUID = 1L;

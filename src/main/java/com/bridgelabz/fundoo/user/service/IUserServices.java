@@ -24,9 +24,6 @@ public interface IUserServices {
 	// Method to validate email
 	public Response validateEmail(String token);
 	
-	// Setting forgot password
-//	public Response setForgettedPasword(String token , String newPassword);
-	
 	// Resetting Password
 	public Response resetPassword(PasswordDTO passwordDto , String token);
 	

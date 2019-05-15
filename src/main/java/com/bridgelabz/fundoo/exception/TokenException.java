@@ -1,5 +1,5 @@
 package com.bridgelabz.fundoo.exception;
-
+// Token Exception Class
 public class TokenException extends RuntimeException{
 
 	private static final long serialVersionUID = 1L;

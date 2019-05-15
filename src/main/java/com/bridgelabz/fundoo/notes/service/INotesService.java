@@ -10,15 +10,25 @@ import com.bridgelabz.fundoo.response.Response;
 @Service
 public interface INotesService {
 
+	// Method to create note
 	public Response createNote(NotesDto notesDto ,String token);
 
+	// Method to delete note
 	public Response delete(String token , String userId);
 
+	// Method to update note
 	public Response updateNote(NotesDto notesDto, String token, String userId);
 	
+	 
 	public List<NotesDto>  getAllNotes(String token);
 	
+	// Method to archive and unarchive
 	public Response archiveAndUnArchive(String token, String noteId);
 	
+	// Method to pin and unpin
+	public Response pinAndUnPin(String token, String noteId);
+	
+	// Method to trash and untrash
+	public Response trashAndUnTrash(String token, String noteId);
 	
 }

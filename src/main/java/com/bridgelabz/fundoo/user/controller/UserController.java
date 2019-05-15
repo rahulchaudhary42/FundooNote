@@ -56,6 +56,7 @@ public class UserController {
 		return new ResponseEntity<ResponseToken>(statusResponse, HttpStatus.OK);
 	}
 	
+	// // method for email validation
 	@GetMapping("/emailvalidation/{token}")
 	public ResponseEntity<Response> validateEmail(@PathVariable String token){
 		Response statusResponse = userServices.validateEmail(token);
@@ -63,6 +64,7 @@ public class UserController {
 		
 	}
 	
+	// method for forgot password
 	@PostMapping("/forgotpassword")
 	public ResponseEntity<Response> forgotPassword(@RequestParam String email){
 		logger.info("User email : " + email);
@@ -70,6 +72,7 @@ public class UserController {
 		return new ResponseEntity<Response> (statusResponse, HttpStatus.OK);
 	}
 	
+    // method for reset password
 	@PutMapping("/resetpassword/{token}")
 	public ResponseEntity<Response> resetPassword(@Valid @RequestBody PasswordDTO passwordDto,@RequestParam String token){
 		Response statusResponse = userServices.resetPassword(passwordDto, token);

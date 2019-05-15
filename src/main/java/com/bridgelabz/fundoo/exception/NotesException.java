@@ -1,5 +1,6 @@
 package com.bridgelabz.fundoo.exception;
 
+// Node Exception Class
 public class NotesException extends RuntimeException{
 
 	private static final long serialVersionUID = 1L;

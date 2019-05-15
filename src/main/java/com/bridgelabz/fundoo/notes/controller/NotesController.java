@@ -58,6 +58,24 @@ public class NotesController {
 		return listnotes;
 	}
 	
+	@PutMapping("/pin")
+	public ResponseEntity<Response> pinNote(@RequestHeader String token , @RequestParam String id){
+		Response responseStatus = noteService.pinAndUnPin(token, id);
+		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
+	}
+	
+	@PutMapping("/archive")
+	public ResponseEntity<Response> archiveNote(@RequestHeader String token , @RequestParam String id){
+		Response responseStatus = noteService.archiveAndUnArchive(token, id);
+		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
+	}
+	
+	@PutMapping("/trash")
+	public ResponseEntity<Response> trashNote(@RequestHeader String token, @RequestParam String id){
+		Response responseStatus = noteService.trashAndUnTrash(token, id);
+		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
+	}
+	
 	
 
 

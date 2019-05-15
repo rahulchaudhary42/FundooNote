@@ -16,11 +16,13 @@ public class ApplicationConfiguration {
 		return new ModelMapper();
 	}
 	
+	// Creating bean object for PasswordEncoder
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 	
+	//Creating bean object for Response
 	@Bean
 	public Response getResponse() {
 		return new Response();
