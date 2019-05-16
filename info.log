@@ -1668,3 +1668,85 @@ com.bridgelabz.fundoo.exception.NotesException: Invalid input
 2019-05-15 13:05:56.341  INFO 19400 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
 2019-05-15 13:05:56.348  INFO 19400 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-05-15 13:05:56.352  INFO 19400 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:25}] to localhost:27017 because the pool has been closed.
+2019-05-15 19:03:24.922  INFO 31224 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 31224 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-15 19:03:24.924  INFO 31224 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-15 19:03:25.691  INFO 31224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-15 19:03:25.748  INFO 31224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53ms. Found 3 repository interfaces.
+2019-05-15 19:03:26.195  INFO 31224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-15 19:03:26.214  INFO 31224 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-15 19:03:26.215  INFO 31224 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-15 19:03:26.297  INFO 31224 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-15 19:03:26.298  INFO 31224 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1353 ms
+2019-05-15 19:03:26.477  INFO 31224 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-15 19:03:26.478  INFO 31224 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-15 19:03:26.575  INFO 31224 --- [cluster-ClusterId{value='5cdc15261bad0779f8e30331', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:26}] to localhost:27017
+2019-05-15 19:03:26.578  INFO 31224 --- [cluster-ClusterId{value='5cdc15261bad0779f8e30331', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2028419}
+2019-05-15 19:03:26.579  INFO 31224 --- [cluster-ClusterId{value='5cdc15261bad0779f8e30331', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-15 19:03:26.720  INFO 31224 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:27}] to localhost:27017
+2019-05-15 19:03:27.134  INFO 31224 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-15 19:03:27.325  INFO 31224 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-15 19:03:27.335  INFO 31224 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-15 19:03:27.342  INFO 31224 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-15 19:03:27.524  INFO 31224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-15 19:03:27.526  INFO 31224 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.788 seconds (JVM running for 3.071)
+2019-05-15 19:03:44.472  INFO 31224 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-15 19:03:44.477  INFO 31224 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-15 19:03:44.482  INFO 31224 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:27}] to localhost:27017 because the pool has been closed.
+2019-05-15 19:04:41.711  INFO 31400 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 31400 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-15 19:04:41.714  INFO 31400 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-15 19:04:42.477  INFO 31400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-15 19:04:42.533  INFO 31400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 3 repository interfaces.
+2019-05-15 19:04:42.948  INFO 31400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-15 19:04:42.967  INFO 31400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-15 19:04:42.967  INFO 31400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-15 19:04:43.057  INFO 31400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-15 19:04:43.057  INFO 31400 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1302 ms
+2019-05-15 19:04:43.242  INFO 31400 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-15 19:04:43.242  INFO 31400 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-15 19:04:43.381  INFO 31400 --- [cluster-ClusterId{value='5cdc15731bad077aa822781e', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:28}] to localhost:27017
+2019-05-15 19:04:43.383  INFO 31400 --- [cluster-ClusterId{value='5cdc15731bad077aa822781e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1653612}
+2019-05-15 19:04:43.384  INFO 31400 --- [cluster-ClusterId{value='5cdc15731bad077aa822781e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-15 19:04:43.522  INFO 31400 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:29}] to localhost:27017
+2019-05-15 19:04:43.950  INFO 31400 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-15 19:04:44.143  INFO 31400 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-15 19:04:44.154  INFO 31400 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-15 19:04:44.171  INFO 31400 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-15 19:04:44.349  INFO 31400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-15 19:04:44.350  INFO 31400 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 2.859 seconds (JVM running for 3.125)
+2019-05-15 19:04:51.724  INFO 31400 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-15 19:04:51.724  INFO 31400 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-15 19:04:51.730  INFO 31400 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-05-15 19:04:51.786  INFO 31400 --- [http-nio-8085-exec-2] c.b.f.user.controller.UserController     : LoginDTO data LoginDTO [email=admin@gmail.com, password=admin]
+2019-05-15 19:04:51.830  INFO 31400 --- [http-nio-8085-exec-2] c.b.f.u.s.UserServicesImplementation     : User Password : $2a$10$GxFZxrsBMNuLrEKVtIz1P.2PyBL5wR/X.rPWMShvVS1inor5Oa/IS
+2019-05-15 19:06:35.830  INFO 31400 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-15 19:06:35.835  INFO 31400 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-15 19:06:35.837  INFO 31400 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:29}] to localhost:27017 because the pool has been closed.
+2019-05-15 19:21:32.403  INFO 2867 --- [main] c.b.fundoo.FundooNoteApplication         : Starting FundooNoteApplication on admin1-H110M-H with PID 2867 (/home/admin1/Documents/fundooNote/target/classes started by admin1 in /home/admin1/Documents/fundooNote)
+2019-05-15 19:21:32.430  INFO 2867 --- [main] c.b.fundoo.FundooNoteApplication         : No active profile set, falling back to default profiles: default
+2019-05-15 19:21:34.384  INFO 2867 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-15 19:21:34.456  INFO 2867 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 3 repository interfaces.
+2019-05-15 19:21:35.832  INFO 2867 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-05-15 19:21:35.849  INFO 2867 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-15 19:21:35.850  INFO 2867 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-15 19:21:35.923  INFO 2867 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-15 19:21:35.924  INFO 2867 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3435 ms
+2019-05-15 19:21:36.313  INFO 2867 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-15 19:21:36.313  INFO 2867 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-05-15 19:21:36.345  INFO 2867 --- [cluster-ClusterId{value='5cdc19681bad070b33af069d', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4}] to localhost:27017
+2019-05-15 19:21:36.347  INFO 2867 --- [cluster-ClusterId{value='5cdc19681bad070b33af069d', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1457053}
+2019-05-15 19:21:36.348  INFO 2867 --- [cluster-ClusterId{value='5cdc19681bad070b33af069d', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-05-15 19:21:36.836  INFO 2867 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:5}] to localhost:27017
+2019-05-15 19:21:37.628  INFO 2867 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-15 19:21:38.019  INFO 2867 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-15 19:21:38.052  INFO 2867 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-15 19:21:38.059  INFO 2867 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-15 19:21:38.247  INFO 2867 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-05-15 19:21:38.248  INFO 2867 --- [main] c.b.fundoo.FundooNoteApplication         : Started FundooNoteApplication in 6.882 seconds (JVM running for 7.937)
+2019-05-15 19:21:49.081  INFO 2867 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-15 19:21:49.081  INFO 2867 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-15 19:21:49.095  INFO 2867 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-05-15 19:21:49.289  INFO 2867 --- [http-nio-8085-exec-2] c.b.f.user.controller.UserController     : LoginDTO data LoginDTO [email=admin@gmail.com, password=admin]
+2019-05-15 19:21:49.509  INFO 2867 --- [http-nio-8085-exec-2] c.b.f.u.s.UserServicesImplementation     : User Password : $2a$10$GxFZxrsBMNuLrEKVtIz1P.2PyBL5wR/X.rPWMShvVS1inor5Oa/IS
+2019-05-15 19:29:19.610  INFO 2867 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-15 19:29:19.628  INFO 2867 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-15 19:29:19.631  INFO 2867 --- [RMI TCP Connection(2)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:5}] to localhost:27017 because the pool has been closed.

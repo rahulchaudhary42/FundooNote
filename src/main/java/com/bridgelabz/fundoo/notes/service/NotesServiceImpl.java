@@ -193,7 +193,4 @@ public class NotesServiceImpl implements INotesService {
 			return response;
 		}
 	}
-
-
-
 }
