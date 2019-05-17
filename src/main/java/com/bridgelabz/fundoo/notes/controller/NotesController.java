@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -76,6 +77,23 @@ public class NotesController {
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
 	}
 	
+	@GetMapping("/getarchivenotes")
+	public List<NotesDto>  getArchiveNotes(@RequestHeader String token) {
+		List<NotesDto> listnotes = noteService.getArchiveNotes(token);
+		return listnotes;
+	}
+	
+	@GetMapping("/gettrashnotes")
+	public List<NotesDto>  getTrashNotes(@RequestHeader String token) {
+		List<NotesDto> listnotes = noteService.getTrashNotes(token);
+		return listnotes;
+	}
+	
+	@DeleteMapping("/deletepermanent")
+	public ResponseEntity<Response> deleteNote(@RequestHeader String token, @RequestParam String noteId){
+		Response responseStatus = noteService.deletePermanently(token, noteId);
+		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
+	}
 	
 
 

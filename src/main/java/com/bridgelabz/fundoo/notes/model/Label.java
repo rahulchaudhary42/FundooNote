@@ -14,6 +14,15 @@ public class Label {
 	private String labelName;
 	private LocalDateTime createdDate;
 	private LocalDateTime modifiedDate;
+	private Note not;
+	public Note getNot() {
+		return not;
+	}
+
+	public void setNot(Note not) {
+		this.not = not;
+	}
+
 	private List<Note> notes;
 	private String userId;
 

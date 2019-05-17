@@ -193,4 +193,46 @@ public class NotesServiceImpl implements INotesService {
 			return response;
 		}
 	}
+	
+	@Override
+	public List<NotesDto> getArchiveNotes(String token) {
+		String id = userToken.tokenVerify(token);
+		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
+		List<NotesDto> listNotes = new ArrayList<>();
+		for(Note userNotes : notes) {
+			NotesDto notesDto = modelMapper.map(userNotes, NotesDto.class);
+			if(userNotes.isArchive() == true) {
+				listNotes.add(notesDto);
+			}
+		}
+		return listNotes;
+	}
+
+	@Override
+	public List<NotesDto> getTrashNotes(String token) {
+		String id = userToken.tokenVerify(token);
+		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
+		List<NotesDto> listNotes = new ArrayList<>();
+		for(Note userNotes : notes) {
+			NotesDto notesDto = modelMapper.map(userNotes, NotesDto.class);
+			if(userNotes.isTrash() == true) {
+				listNotes.add(notesDto);
+			}
+		}
+		return listNotes;
+	}
+	
+	@Override
+	public Response deletePermanently(String token, String noteId) {
+		String id = userToken.tokenVerify(token);
+		Note notes = notesRepository.findByIdAndUserId(noteId, id);
+		if(notes.isTrash() == true) {
+			notesRepository.delete(notes);
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.deleted"),Integer.parseInt(environment.getProperty("status.success.code")));
+			return response;
+		}else {
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.notdeleted"),Integer.parseInt(environment.getProperty("status.note.errorCode")));
+			return response;
+		}
+	}
 }

@@ -49,4 +49,10 @@ public class LabelController {
 		List<LabelDto> listLabel = labelService.getAllLabel(token);
 		return listLabel;
 	}
+	
+	@PutMapping("/addlebeltonote")
+	ResponseEntity<Response> addNoteToLebel(@RequestParam String labelId , @RequestHeader String token , @RequestParam String noteId){
+		Response statusResponse = labelService.addLabelToNote(labelId, token, noteId);
+		return new ResponseEntity<Response>(statusResponse,HttpStatus.OK);
+	}
 }

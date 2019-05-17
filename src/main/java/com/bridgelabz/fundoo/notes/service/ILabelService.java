@@ -21,4 +21,7 @@ public interface ILabelService {
 	
 	public List<LabelDto> getAllLabel(String token);
 	
+	public Response addLabelToNote(String labelId, String token , String noteId);
+ 
+	
 }

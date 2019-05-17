@@ -146,5 +146,58 @@ public class LabelServiceImpl implements ILabelService{
 		}
 		return listLabel;
 	}
+	
+	@Override
+	public Response addLabelToNote(String labelId, String token , String noteId) {
+		String userId = userToken.tokenVerify(token);
+		System.out.println("------------------");
+		Optional<User> user = userRepository.findById(userId);
+		System.out.println(user.isPresent());
+		if(!user.isPresent()) {
+			throw new LabelException("Invalid input", -6);
+		}
+		Label label = labelRepository.findByLabelIdAndUserId(labelId, userId);
+		System.out.println(label);
+		if(label == null) {
+			throw new LabelException("No such lebel exist", -6);
+		}
+		Note note =  notesRepository.findByIdAndUserId(noteId, userId);
+		
+		System.out.println("note"+note);
+		if(note == null) {
+			throw new LabelException("No such note exist", -6);
+		}
+		 
+		
+//		label.setModifiedDate(LocalDateTime.now());
+//		label.setNot(note);
+//		//label.getNotes().add(note);
+//		label=labelRepository.save(label);
+//		System.out.println("label adeded");
+		
+		label.setModifiedDate(LocalDateTime.now());
+		label.getNotes().add(note);
+		note.getListLabel().add(label);
+		note.setModified(LocalDateTime.now());
+	   label= labelRepository.save(label);
+      List<Label> labels =note.getListLabel();
+		//user.get().getLabel();
+		if(!(labels == null)) {
+			labels.add(label);
+			 //user.get().setLabel(labels);
+			note.setListLabel(labels);
+		}else {
+			labels= new ArrayList<Label>();
+			labels.add(label);
+			//user.get().setLabel(labels);
+			note.setListLabel(labels);
+		}
+		notesRepository.save(note);
+
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"), Integer.parseInt(environment.getProperty("status.success.code")));
+		return response;
+	}
+	
+	
 
 }

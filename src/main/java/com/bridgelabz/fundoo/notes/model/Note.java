@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
   
 @Document(collection="note")
@@ -21,9 +22,14 @@ public class Note implements Serializable{
 	private boolean isTrash;
 	private LocalDateTime created;
 	private LocalDateTime modified;
-     List<Boolean> note;
+	
+	@DBRef
+	private List<Label> listLabel;
+   
  
 	
+
+
 	public Note() {
 		super();
 	}
@@ -99,6 +105,14 @@ public class Note implements Serializable{
 	public void setModified(LocalDateTime modified) {
 		this.modified = modified;
 	}
+	
+	public List<Label> getListLabel() {
+		return listLabel;
+	}
+
+	public void setListLabel(List<Label> listLabel) {
+		this.listLabel = listLabel;
+	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
@@ -108,8 +122,10 @@ public class Note implements Serializable{
 	public String toString() {
 		return "Note [id=" + id + ", userId=" + userId + ", title=" + title + ", description=" + description
 				+ ", isPin=" + isPin + ", isArchive=" + isArchive + ", isTrash=" + isTrash + ", created=" + created
-				+ ", modified=" + modified + "]";
+				+ ", modified=" + modified + ", listLabel=" + listLabel + "]";
 	}
+
+	 
 	
 
 }

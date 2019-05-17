@@ -119,10 +119,5 @@ public class User {
 		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", password=" + password
 				+ ", mobileNumber=" + mobileNumber + ", isVarified=" + isVarified + ", registeredDate=" + registeredDate
 				+ ", updatedDate=" + updatedDate + ", notes=" + notes + ", label=" + label + "]";
-	}
- 
-	 
- 
-	 
-	
+	}	
 }
