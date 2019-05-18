@@ -7,10 +7,10 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-  
-@Document(collection="note")
-public class Note implements Serializable{
-	
+
+@Document(collection = "note")
+public class Note implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 	@Id
 	private String id;
@@ -22,13 +22,19 @@ public class Note implements Serializable{
 	private boolean isTrash;
 	private LocalDateTime created;
 	private LocalDateTime modified;
-	
+
 	@DBRef
 	private List<Label> listLabel;
-   
- 
-	
 
+	private Label label;
+
+	public Label getLabel() {
+		return label;
+	}
+
+	public void setLabel(Label label) {
+		this.label = label;
+	}
 
 	public Note() {
 		super();
@@ -105,7 +111,7 @@ public class Note implements Serializable{
 	public void setModified(LocalDateTime modified) {
 		this.modified = modified;
 	}
-	
+
 	public List<Label> getListLabel() {
 		return listLabel;
 	}
@@ -124,8 +130,5 @@ public class Note implements Serializable{
 				+ ", isPin=" + isPin + ", isArchive=" + isArchive + ", isTrash=" + isTrash + ", created=" + created
 				+ ", modified=" + modified + ", listLabel=" + listLabel + "]";
 	}
-
-	 
-	
 
 }

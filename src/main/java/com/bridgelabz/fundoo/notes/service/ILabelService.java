@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.bridgelabz.fundoo.notes.dto.LabelDto;
+import com.bridgelabz.fundoo.notes.dto.NotesDto;
 import com.bridgelabz.fundoo.response.Response;
 
 @Service
@@ -22,6 +23,11 @@ public interface ILabelService {
 	public List<LabelDto> getAllLabel(String token);
 	
 	public Response addLabelToNote(String labelId, String token , String noteId);
+	
+	public Response removeLabelFromNote(String labelId ,String token , String noteId);
  
+	public List<LabelDto> getLebelsOfNote(String token, String noteId);
+	
+	public List<NotesDto> getNotesOfLabel(String token, String labelId);
 	
 }

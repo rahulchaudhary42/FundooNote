@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="label")
@@ -14,15 +15,10 @@ public class Label {
 	private String labelName;
 	private LocalDateTime createdDate;
 	private LocalDateTime modifiedDate;
-	private Note not;
-	public Note getNot() {
-		return not;
-	}
+	 
+	 
 
-	public void setNot(Note not) {
-		this.not = not;
-	}
-
+	@DBRef
 	private List<Note> notes;
 	private String userId;
 

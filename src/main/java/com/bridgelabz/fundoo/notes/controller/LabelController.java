@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoo.notes.dto.LabelDto;
+import com.bridgelabz.fundoo.notes.dto.NotesDto;
 import com.bridgelabz.fundoo.notes.service.ILabelService;
 import com.bridgelabz.fundoo.response.Response;
 
@@ -54,5 +55,23 @@ public class LabelController {
 	ResponseEntity<Response> addNoteToLebel(@RequestParam String labelId , @RequestHeader String token , @RequestParam String noteId){
 		Response statusResponse = labelService.addLabelToNote(labelId, token, noteId);
 		return new ResponseEntity<Response>(statusResponse,HttpStatus.OK);
+	}
+	
+	@PutMapping("/removefromnote")
+	ResponseEntity<Response> removeFromNote(@RequestHeader String token, @RequestParam String noteId , @RequestParam String labelId){
+		Response statusResponse = labelService.removeLabelFromNote(labelId, token, noteId);
+		return new ResponseEntity<Response>(statusResponse,HttpStatus.OK);
+	}
+	
+	@GetMapping("/getlebelofnote")
+	List<LabelDto> getLebelOfNote(@RequestHeader String token, @RequestParam String noteId){
+		List<LabelDto> listLabel = labelService.getLebelsOfNote(token, noteId);
+		return listLabel;
+	}
+	
+	@GetMapping("/getnotesoflabel")
+	List<NotesDto> getNotesOfLabel(@RequestHeader String token , @RequestParam String labelId){
+		List<NotesDto> listNotes = labelService.getNotesOfLabel(token, labelId);
+		return listNotes;
 	}
 }
