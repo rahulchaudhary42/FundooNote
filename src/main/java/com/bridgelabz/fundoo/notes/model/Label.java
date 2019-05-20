@@ -20,6 +20,17 @@ public class Label {
 
 	@DBRef
 	private List<Note> notes;
+	
+	private Note note;
+	
+	public Note getNote() {
+		return note;
+	}
+
+	public void setNote(Note note) {
+		this.note = note;
+	}
+
 	private String userId;
 
 	public Label() {

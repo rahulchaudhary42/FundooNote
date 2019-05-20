@@ -63,13 +63,18 @@ public class LabelController {
 		return new ResponseEntity<Response>(statusResponse,HttpStatus.OK);
 	}
 	
+	@PutMapping("/addnotetolabel")
+	ResponseEntity<Response> addNoteToLabel(@RequestParam String labelId , @RequestHeader String token , @RequestParam String noteId){
+		Response statusResponse = labelService.addNoteToLabel(labelId, token, noteId);
+		return new ResponseEntity<Response>(statusResponse,HttpStatus.OK);
+	}
+	
 	@GetMapping("/getlebelofnote")
 	List<LabelDto> getLebelOfNote(@RequestHeader String token, @RequestParam String noteId){
 		List<LabelDto> listLabel = labelService.getLebelsOfNote(token, noteId);
 		return listLabel;
 	}
-	
-	@GetMapping("/getnotesoflabel")
+	@GetMapping("/getnoteoflabel")
 	List<NotesDto> getNotesOfLabel(@RequestHeader String token , @RequestParam String labelId){
 		List<NotesDto> listNotes = labelService.getNotesOfLabel(token, labelId);
 		return listNotes;

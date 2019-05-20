@@ -128,7 +128,9 @@ public class Note implements Serializable {
 	public String toString() {
 		return "Note [id=" + id + ", userId=" + userId + ", title=" + title + ", description=" + description
 				+ ", isPin=" + isPin + ", isArchive=" + isArchive + ", isTrash=" + isTrash + ", created=" + created
-				+ ", modified=" + modified + ", listLabel=" + listLabel + "]";
+				+ ", modified=" + modified + ", listLabel=" + listLabel + ", label=" + label + "]";
 	}
+
+ 
 
 }

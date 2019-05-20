@@ -50,7 +50,6 @@ public class LabelServiceImpl implements ILabelService {
 
 	@Override
 	public Response createLabel(LabelDto labelDto, String token) {
-		System.out.println("------------------------------------------------");
 		System.out.println(labelDto.getLabelName());
 		String userId = userToken.tokenVerify(token);
 		Optional<User> user = userRepository.findById(userId);
@@ -109,9 +108,7 @@ public class LabelServiceImpl implements ILabelService {
 
 	@Override
 	public Response updateLabel(String labelId, String token, LabelDto labelDto) {
-
-		System.out.println("------------------------------------------------");
-		System.out.println(labelDto.getLabelName());
+		//System.out.println(labelDto.getLabelName());
 		String userId = userToken.tokenVerify(token);
 		Optional<User> user = userRepository.findById(userId);
 		if (!user.isPresent()) {
@@ -156,7 +153,6 @@ public class LabelServiceImpl implements ILabelService {
 	@Override
 	public Response addLabelToNote(String labelId, String token, String noteId) {
 		String userId = userToken.tokenVerify(token);
-		System.out.println("------------------");
 		Optional<User> user = userRepository.findById(userId);
 		System.out.println(user.isPresent());
 		if (!user.isPresent()) {
@@ -202,45 +198,100 @@ public class LabelServiceImpl implements ILabelService {
 		}
 		note.setModified(LocalDateTime.now());
 		note.setLabel(label);
+		note.getListLabel().remove(label);
 		// label.getNotes().add(note);
-		notesRepository.delete(note);
+		notesRepository.save(note);
 		Response response = StatusHelper.statusInfo(environment.getProperty("status.label.removedfromnote"),
 				Integer.parseInt(environment.getProperty("status.success.code")));
 		return response;
 	}
 	
 	@Override
+	public Response addNoteToLabel(String labelId, String token, String noteId) {
+		String userId = userToken.tokenVerify(token);
+		System.out.println("------------------");
+		Optional<User> user = userRepository.findById(userId);
+		System.out.println(user.isPresent());
+		if (!user.isPresent()) {
+			throw new LabelException("Invalid input", -6);
+		}
+		Label label = labelRepository.findByLabelIdAndUserId(labelId, userId);
+		System.out.println(label);
+		if (label == null) {
+			throw new LabelException("No such lebel exist", -6);
+		}
+		Note note = notesRepository.findByIdAndUserId(noteId, userId);
+
+		System.out.println("note" + note);
+		if (note == null) {
+			throw new LabelException("No such note exist", -6);
+		}
+
+		label.setModifiedDate(LocalDateTime.now());
+		label.setNote(note);
+		labelRepository.save(label);
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
+				Integer.parseInt(environment.getProperty("status.success.code")));
+		return response;
+	}
+
+	@Override
+	public Response removeNoteFromLabel(String labelId, String token, String noteId) {
+		String userId = userToken.tokenVerify(token);
+		Optional<User> user = userRepository.findById(userId);
+		if (!user.isPresent()) {
+			throw new LabelException("Invalid input", -6);
+		}
+		Label label = labelRepository.findByLabelIdAndUserId(labelId, userId);
+		if (label == null) {
+			throw new LabelException("No such lebel exist", -6);
+		}
+		Note note = notesRepository.findByIdAndUserId(noteId, userId);
+		if (note == null) {
+			throw new LabelException("No such note exist", -6);
+		}
+		label.setModifiedDate(LocalDateTime.now());
+		label.setNote(note);
+		labelRepository.delete(label);
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.label.removedfromnote"),
+				Integer.parseInt(environment.getProperty("status.success.code")));
+		return response;
+	}
+	@Override
 	public List<LabelDto> getLebelsOfNote(String token, String noteId) {
 		String userId = userToken.tokenVerify(token);
 		Optional<User> user = userRepository.findById(userId);
-		if(!user.isPresent()) {
+		if (!user.isPresent()) {
 			throw new LabelException("User does not exist", -6);
 		}
 		Optional<Note> note = notesRepository.findById(noteId);
-		if(!note.isPresent()) {
+		if (!note.isPresent()) {
 			throw new NotesException("Note does not exist", -6);
 		}
-		List<Label> lebel = note.get().getListLabel();
+		 
+		List<Label> label = note.get().getListLabel();
 		
+		System.err.println(label);
+      System.err.println(note);
 		List<LabelDto> listLabel = new ArrayList<>();
-		for(Label noteLabel : lebel) {
+		for (Label noteLabel : label) {
 			LabelDto labelDto = modelMapper.map(noteLabel, LabelDto.class);
 			listLabel.add(labelDto);
 		}
 		System.err.println(listLabel);
 		return listLabel;
-		
+
 	}
-	
+
 	@Override
 	public List<NotesDto> getNotesOfLabel(String token, String labelId) {
 		String userId = userToken.tokenVerify(token);
 		Optional<User> user = userRepository.findById(userId);
-		if(!user.isPresent()) {
+		if (!user.isPresent()) {
 			throw new TokenException("Invalid input", -6);
 		}
 		Optional<Label> label = labelRepository.findById(labelId);
-		if(!label.isPresent()) {
+		if (!label.isPresent()) {
 			throw new LabelException("No lebel exist", -6);
 		}
 		List<Note> notes = label.get().getNotes();
@@ -251,5 +302,7 @@ public class LabelServiceImpl implements ILabelService {
 		}
 		return listNotes;
 	}
+
+
 
 }

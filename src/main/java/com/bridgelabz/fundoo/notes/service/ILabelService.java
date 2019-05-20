@@ -30,4 +30,8 @@ public interface ILabelService {
 	
 	public List<NotesDto> getNotesOfLabel(String token, String labelId);
 	
+	public Response addNoteToLabel(String labelId, String token, String noteId);
+	
+	public Response removeNoteFromLabel(String labelId, String token, String noteId);
+	
 }
