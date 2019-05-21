@@ -58,7 +58,6 @@ public class UserServicesImplementation implements IUserServices {
 
 	@Override
 	public Response register(UserDTO userDTO) {
-
 		Email email = new Email();
 		Response response = null;
 		log.info(userDTO.toString());

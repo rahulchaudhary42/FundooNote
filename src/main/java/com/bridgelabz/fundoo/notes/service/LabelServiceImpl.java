@@ -257,51 +257,7 @@ public class LabelServiceImpl implements ILabelService {
 				Integer.parseInt(environment.getProperty("status.success.code")));
 		return response;
 	}
-	@Override
-	public List<LabelDto> getLebelsOfNote(String token, String noteId) {
-		String userId = userToken.tokenVerify(token);
-		Optional<User> user = userRepository.findById(userId);
-		if (!user.isPresent()) {
-			throw new LabelException("User does not exist", -6);
-		}
-		Optional<Note> note = notesRepository.findById(noteId);
-		if (!note.isPresent()) {
-			throw new NotesException("Note does not exist", -6);
-		}
-		 
-		List<Label> label = note.get().getListLabel();
-		
-		System.err.println(label);
-      System.err.println(note);
-		List<LabelDto> listLabel = new ArrayList<>();
-		for (Label noteLabel : label) {
-			LabelDto labelDto = modelMapper.map(noteLabel, LabelDto.class);
-			listLabel.add(labelDto);
-		}
-		System.err.println(listLabel);
-		return listLabel;
 
-	}
-
-	@Override
-	public List<NotesDto> getNotesOfLabel(String token, String labelId) {
-		String userId = userToken.tokenVerify(token);
-		Optional<User> user = userRepository.findById(userId);
-		if (!user.isPresent()) {
-			throw new TokenException("Invalid input", -6);
-		}
-		Optional<Label> label = labelRepository.findById(labelId);
-		if (!label.isPresent()) {
-			throw new LabelException("No lebel exist", -6);
-		}
-		List<Note> notes = label.get().getNotes();
-		List<NotesDto> listNotes = new ArrayList<>();
-		for (Note usernotes : notes) {
-			NotesDto noteDto = modelMapper.map(usernotes, NotesDto.class);
-			listNotes.add(noteDto);
-		}
-		return listNotes;
-	}
 
 
 
