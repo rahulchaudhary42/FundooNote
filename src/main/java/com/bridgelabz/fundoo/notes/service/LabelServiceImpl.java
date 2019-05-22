@@ -12,10 +12,10 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 import com.bridgelabz.fundoo.exception.LabelException;
-import com.bridgelabz.fundoo.exception.NotesException;
-import com.bridgelabz.fundoo.exception.TokenException;
+//import com.bridgelabz.fundoo.exception.NotesException;
+//import com.bridgelabz.fundoo.exception.TokenException;
 import com.bridgelabz.fundoo.notes.dto.LabelDto;
-import com.bridgelabz.fundoo.notes.dto.NotesDto;
+//import com.bridgelabz.fundoo.notes.dto.NotesDto;
 import com.bridgelabz.fundoo.notes.model.Label;
 import com.bridgelabz.fundoo.notes.model.Note;
 import com.bridgelabz.fundoo.notes.repository.INotesRepository;
