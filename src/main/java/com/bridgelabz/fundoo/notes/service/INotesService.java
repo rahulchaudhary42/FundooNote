@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
  
 import com.bridgelabz.fundoo.notes.dto.NotesDto;
+ 
 import com.bridgelabz.fundoo.response.Response;
 @Service
 public interface INotesService {
@@ -36,4 +37,6 @@ public interface INotesService {
 	public List<NotesDto> getTrashNotes(String token); 
 	
 	public Response deletePermanently(String token, String noteId);
+	
+	 
 }

@@ -4,16 +4,18 @@ import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.Optional;
 
+import javax.websocket.server.PathParam;
+
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.bridgelabz.fundoo.exception.EmailException;
 import com.bridgelabz.fundoo.exception.LoginException;
@@ -194,5 +196,7 @@ public class UserServicesImplementation implements IUserServices {
 				Integer.parseInt(environment.getProperty("status.login.errorCode")));
 		return response;
 	}
-
+	
+	
+	
 }

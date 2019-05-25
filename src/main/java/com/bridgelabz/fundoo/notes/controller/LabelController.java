@@ -69,10 +69,10 @@ public class LabelController {
 		return new ResponseEntity<Response>(statusResponse,HttpStatus.OK);
 	}
 	
-	@PutMapping("/removefromnote")
-	ResponseEntity<Response> removeFromLabel(@RequestHeader String token, @RequestParam String noteId , @RequestParam String labelId){
-		Response statusResponse = labelService.removeNoteFromLabel(labelId, token, noteId);
-		return new ResponseEntity<Response>(statusResponse,HttpStatus.OK);
-	}
+//	@PutMapping("/removefromnote")
+//	ResponseEntity<Response> removeFromLabel(@RequestHeader String token, @RequestParam String noteId , @RequestParam String labelId){
+//		Response statusResponse = labelService.removeNoteFromLabel(labelId, token, noteId);
+//		return new ResponseEntity<Response>(statusResponse,HttpStatus.OK);
+//	}
 	
 }

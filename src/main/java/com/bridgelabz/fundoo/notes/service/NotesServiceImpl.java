@@ -3,8 +3,9 @@ package com.bridgelabz.fundoo.notes.service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+ 
 import java.util.Optional;
-
+ 
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +23,8 @@ import com.bridgelabz.fundoo.user.model.User;
 import com.bridgelabz.fundoo.user.repository.IUserRepository;
 import com.bridgelabz.fundoo.util.StatusHelper;
 import com.bridgelabz.fundoo.util.UserToken;
+import com.fasterxml.jackson.databind.ObjectMapper;
+ 
 
 @Service("notesService")
 @PropertySource("classpath:message.properties")
@@ -43,6 +46,14 @@ public class NotesServiceImpl implements INotesService {
 
 	@Autowired
 	private Environment environment;
+	
+	String INDEX="es";
+	String TYPE="createnote";
+	
+	 
+
+	@Autowired
+    private ObjectMapper objectMapper;
 
 	@Override
 	public Response createNote(NotesDto notesDto, String token) {
@@ -67,7 +78,7 @@ public class NotesServiceImpl implements INotesService {
 
 		List<Note> notes = user.get().getNotes();
 
-		if (!(notes == null)) {
+		if (notes != null) {
 			notes.add(note);
 			user.get().setNotes(notes);
 		} else {
@@ -235,4 +246,8 @@ public class NotesServiceImpl implements INotesService {
 			return response;
 		}
 	}
+
+ 
+
+	 
 }

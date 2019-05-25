@@ -3,6 +3,7 @@ package com.bridgelabz.fundoo.user.controller;
 import java.io.UnsupportedEncodingException;
 
 import javax.validation.Valid;
+import javax.websocket.server.PathParam;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,6 +63,12 @@ public class UserController {
 		Response statusResponse = userServices.validateEmail(token);
 		return new ResponseEntity<Response> (statusResponse, HttpStatus.ACCEPTED);
 		
+	}
+	
+	@GetMapping("/email")
+	public void email(@RequestParam int id)
+	{
+		System.out.println(id);
 	}
 	
 	// method for forgot password
