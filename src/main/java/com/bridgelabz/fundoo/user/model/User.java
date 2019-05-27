@@ -23,7 +23,16 @@ public class User {
 	boolean isVarified;
 	private LocalDate registeredDate;
 	private LocalDate updatedDate;
+	private String image;
 	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	@DBRef
 	private List<Note> notes;
 	
@@ -118,6 +127,8 @@ public class User {
 	public String toString() {
 		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", password=" + password
 				+ ", mobileNumber=" + mobileNumber + ", isVarified=" + isVarified + ", registeredDate=" + registeredDate
-				+ ", updatedDate=" + updatedDate + ", notes=" + notes + ", label=" + label + "]";
-	}	
+				+ ", updatedDate=" + updatedDate + ", image=" + image + ", notes=" + notes + ", label=" + label + "]";
+	}
+
+	 	
 }

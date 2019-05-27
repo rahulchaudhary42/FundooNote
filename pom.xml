@@ -102,6 +102,12 @@
 			<artifactId>elasticsearch</artifactId>
 			<version>LATEST</version>
 		</dependency>
+		
+		  <dependency>
+   <groupId>com.amazonaws</groupId>
+   <artifactId>aws-java-sdk</artifactId>
+   <version>1.11.133</version>
+</dependency>
 	</dependencies>
 
 	<build>

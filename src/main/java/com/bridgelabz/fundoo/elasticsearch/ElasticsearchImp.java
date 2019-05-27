@@ -13,7 +13,6 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.bridgelabz.fundoo.notes.model.Note;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -63,9 +62,10 @@ public class ElasticsearchImp implements IElasticsearch {
 	Note notes=findById(note.getId());
 	@SuppressWarnings("deprecation")
 	UpdateRequest updateRequest=new UpdateRequest(INDEX, TYPE, note.getId());
+	 
 	@SuppressWarnings({ "unused", "unchecked" })
-	Map<String ,Object> mapDoc = objectMapper.convertValue(notes, Map.class);
-	updateRequest.doc(note);
+	Map<String ,Object> mapDoc = objectMapper.convertValue(note, Map.class);
+	updateRequest.doc(mapDoc);
 	UpdateResponse updateResponse = 
 	               client.update(updateRequest, RequestOptions.DEFAULT);
 	return updateResponse

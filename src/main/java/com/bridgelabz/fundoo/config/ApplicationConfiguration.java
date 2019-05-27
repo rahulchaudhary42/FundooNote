@@ -31,6 +31,7 @@ public class ApplicationConfiguration {
 		return new Response();
 	}
 
+	//Creating bean object for ElasticSearch
 	 @Bean(destroyMethod = "close")
 	   public RestHighLevelClient client() 
 	   {
