@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.bridgelabz.fundoo.notes.dto.LabelDto;
-import com.bridgelabz.fundoo.notes.dto.NotesDto;
 import com.bridgelabz.fundoo.response.Response;
 
 @Service

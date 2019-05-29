@@ -4,8 +4,6 @@ import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.Optional;
 
-import javax.websocket.server.PathParam;
-
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +13,6 @@ import org.springframework.core.env.Environment;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-
 import com.bridgelabz.fundoo.exception.EmailException;
 import com.bridgelabz.fundoo.exception.LoginException;
 import com.bridgelabz.fundoo.exception.RegistrationException;
@@ -55,6 +51,7 @@ public class UserServicesImplementation implements IUserServices {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
+	@SuppressWarnings("unused")
 	@Autowired
 	private JavaMailSender javaMailSender;
 
@@ -100,6 +97,7 @@ public class UserServicesImplementation implements IUserServices {
 		return response;
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	public ResponseToken login(LoginDTO loginDto) {
 		ResponseToken response = null;

@@ -49,6 +49,7 @@ public class AmazonService {
 	@Value("${amazonProperties.secretKey}")
 	private String secretKey;
 
+	@SuppressWarnings("deprecation")
 	@PostConstruct
 	private void initializeAmazon() {
 		AWSCredentials credentials = new BasicAWSCredentials(this.accessKey, this.secretKey);

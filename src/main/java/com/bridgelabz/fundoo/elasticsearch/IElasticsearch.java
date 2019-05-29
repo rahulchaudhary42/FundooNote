@@ -1,6 +1,7 @@
 package com.bridgelabz.fundoo.elasticsearch;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -13,5 +14,7 @@ public interface IElasticsearch {
 	public String deleteNote(String id) throws IOException;
 	public Note findById(String id) throws Exception;
 	public String upDateNote(Note note) throws Exception;
+	public List<Note> searchByTitle(String title,String userId) throws IOException;
 
 }
+ 

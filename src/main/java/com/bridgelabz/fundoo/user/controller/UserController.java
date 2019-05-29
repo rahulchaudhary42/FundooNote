@@ -3,8 +3,6 @@ package com.bridgelabz.fundoo.user.controller;
 import java.io.UnsupportedEncodingException;
 
 import javax.validation.Valid;
-import javax.websocket.server.PathParam;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

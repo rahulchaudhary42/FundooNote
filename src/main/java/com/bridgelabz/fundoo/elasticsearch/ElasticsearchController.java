@@ -1,15 +1,19 @@
 package com.bridgelabz.fundoo.elasticsearch;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoo.notes.model.Note;
@@ -42,6 +46,11 @@ public class ElasticsearchController {
 	public String updateNote(@RequestBody Note note) throws Exception
 	{
 	return esService.upDateNote(note);
+	}
+	
+ 	@GetMapping("/searchTitle")
+	public List<Note> searchTitle(@RequestHeader String title , @RequestParam String userId) throws IOException {
+	return esService.searchByTitle(title,userId);
 	}
 
 }

@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoo.notes.dto.LabelDto;
-import com.bridgelabz.fundoo.notes.dto.NotesDto;
 import com.bridgelabz.fundoo.notes.service.ILabelService;
 import com.bridgelabz.fundoo.response.Response;
 

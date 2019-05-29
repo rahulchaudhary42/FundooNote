@@ -52,6 +52,7 @@ public class NotesServiceImpl implements INotesService {
 	
 	 
 
+	@SuppressWarnings("unused")
 	@Autowired
     private ObjectMapper objectMapper;
 
