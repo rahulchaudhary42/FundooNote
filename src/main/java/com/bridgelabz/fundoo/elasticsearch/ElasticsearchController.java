@@ -49,7 +49,7 @@ public class ElasticsearchController {
 	}
 	
  	@GetMapping("/searchTitle")
-	public List<Note> searchTitle(@RequestHeader String title , @RequestParam String userId) throws IOException {
+	public List<Note> searchTitle(@RequestParam String title , @RequestParam String userId) throws IOException {
 	return esService.searchByTitle(title,userId);
 	}
 

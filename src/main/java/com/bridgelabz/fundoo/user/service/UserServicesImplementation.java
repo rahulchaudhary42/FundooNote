@@ -146,6 +146,20 @@ public class UserServicesImplementation implements IUserServices {
 			throw new LoginException("EmailId is not verified", -3);
 		}
 	}
+	 public Response reset(String password, String token)
+	 {
+		 System.out.println("dsfgkdjg  "+password);
+		 String id = userToken.tokenVerify(token);
+		 Optional<User> user = userRepository.findById(id);
+		 User user1 = user.get();
+		 user1.setPassword(passwordEncoder.encode(password));
+		 userRepository.save(user1);
+		 Response response = new Response();
+		 response.setStatusCode(1);
+        response.setStatusMessage("Successfully reset");
+		 return response;
+		 
+	 }
 
 	@Override
 	public Response forgotPassword(String email) {
@@ -165,7 +179,7 @@ public class UserServicesImplementation implements IUserServices {
 		emailObj.setTo(email);
 		emailObj.setSubject("Forgot Password ");
 		try {
-			emailObj.setBody(mailServise.getLink("http://localhost:8085/user/resetpassword/", user.get().getUserId()));
+			emailObj.setBody(mailServise.getLink("http://localhost:4200/user/resetpassword/", user.get().getUserId()));
 		} catch (IllegalArgumentException | UnsupportedEncodingException e1) {
 			e1.printStackTrace();
 		}
@@ -194,6 +208,8 @@ public class UserServicesImplementation implements IUserServices {
 				Integer.parseInt(environment.getProperty("status.login.errorCode")));
 		return response;
 	}
+
+	 
 	
 	
 	

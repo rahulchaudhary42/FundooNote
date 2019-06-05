@@ -9,11 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +30,7 @@ import com.bridgelabz.fundoo.user.service.IUserServices;
 @RestController
 @RequestMapping("/user")
 @PropertySource("classpath:message.properties")
+@CrossOrigin(origins = "*",allowedHeaders = "*",exposedHeaders= {"jwtToken"})
 public class UserController {
 	
 	//Creating Logger Object
@@ -63,12 +66,6 @@ public class UserController {
 		
 	}
 	
-	@GetMapping("/email")
-	public void email(@RequestParam int id)
-	{
-		System.out.println(id);
-	}
-	
 	// method for forgot password
 	@PostMapping("/forgotpassword")
 	public ResponseEntity<Response> forgotPassword(@RequestParam String email){
@@ -76,12 +73,13 @@ public class UserController {
 		Response statusResponse = userServices.forgotPassword(email);
 		return new ResponseEntity<Response> (statusResponse, HttpStatus.OK);
 	}
+	 
 	
     // method for reset password
-	@PutMapping("/resetpassword/{token}")
-	public ResponseEntity<Response> resetPassword(@Valid @RequestBody PasswordDTO passwordDto,@RequestParam String token){
-		Response statusResponse = userServices.resetPassword(passwordDto, token);
-		return new ResponseEntity<Response> (statusResponse, HttpStatus.OK);
+	@PutMapping("/resetpassword")
+	public ResponseEntity<Response> resetPassword(@RequestParam String password , @RequestHeader (value="jwtToken") String token){
+		Response statusResponse = userServices.reset(password, token);
+		return new ResponseEntity<Response> (statusResponse,HttpStatus.OK);
 		
 	}
  
