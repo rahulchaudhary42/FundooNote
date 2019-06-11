@@ -21,13 +21,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoo.notes.dto.NotesDto;
+import com.bridgelabz.fundoo.notes.model.Note;
 import com.bridgelabz.fundoo.notes.service.INotesService;
 import com.bridgelabz.fundoo.response.Response;
 
 @RestController
 @RequestMapping("/user/note")
 @PropertySource("classpath:message.properties")
-@CrossOrigin(allowedHeaders = "*" ,origins = "*")
+@CrossOrigin(origins = "*",allowedHeaders = "*")
 public class NotesController {
 	
 	Logger logger = LoggerFactory.getLogger(NotesController.class);
@@ -56,13 +57,13 @@ public class NotesController {
 	}
 	
 	@GetMapping("/getallnotes")
-	public List<NotesDto>  getAllNotes(@RequestHeader String token) {
-		List<NotesDto> listnotes = noteService.getAllNotes(token);
-		return listnotes;
+	public List<Note>  getAllNotes(@RequestHeader String token) {
+		 
+		return noteService.getAllNotes(token);
 	}
 	
 	@PutMapping("/pin")
-	public ResponseEntity<Response> pinNote(@RequestHeader String token , @RequestParam String id){
+	public ResponseEntity<Response> pinNote(@RequestHeader(name = "token") String token , @RequestParam String id){
 		Response responseStatus = noteService.pinAndUnPin(token, id);
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
 	}
@@ -95,6 +96,24 @@ public class NotesController {
 	public ResponseEntity<Response> deleteNote(@RequestHeader String token, @RequestParam String noteId){
 		Response responseStatus = noteService.deletePermanently(token, noteId);
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
+	}
+	
+//	@GetMapping("/getpinnednotes")
+//	public List<Note> getPinnedNotes(@RequestHeader String token){
+//		List<Note> listnotes = noteService.getPinnedNotes(token);
+//		return listnotes;
+//	}
+	
+	@GetMapping("/getunpinnednotes")
+	public List<Note> getUnPinnedNotes(@RequestHeader String token){
+		List<Note> listnotes = noteService.getUnPinnedNotes(token);
+		return listnotes;
+	}
+	
+	@GetMapping("/getpinnednotes")
+	public List<Note> getPinnedNotes(@RequestHeader String token){
+		List<Note> listnotes = noteService.getPinnedNotes(token);
+		return listnotes;
 	}
 	
 

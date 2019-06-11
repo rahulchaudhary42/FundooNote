@@ -174,18 +174,18 @@ public class NotesServiceImpl implements INotesService {
 		}
 	}
 
-	@Override
-	public List<NotesDto> getAllNotes(String token) {
+
+	public List<Note> getAllNotes(String token) {
 		String id = userToken.tokenVerify(token);
 		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
-		List<NotesDto> listNotes = new ArrayList<>();
-		for (Note userNotes : notes) {
-			NotesDto notesDto = modelMapper.map(userNotes, NotesDto.class);
-			if (userNotes.isArchive() == false && userNotes.isTrash() == false) {
-				listNotes.add(notesDto);
-			}
-		}
-		return listNotes;
+		
+//		for (Note userNotes : notes) {
+//			NotesDto notesDto = modelMapper.map(userNotes, NotesDto.class);
+//			if (userNotes.isArchive() == false && userNotes.isTrash() == false) {
+//				listNotes.add(notesDto);
+//			}
+//		}
+		return notes;
 	}
 
 	@Override
@@ -248,6 +248,57 @@ public class NotesServiceImpl implements INotesService {
 		}
 	}
 
+//	@Override
+//	public List<NotesDto> getPinnedNotes(String token) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
+	 
+	 
+	 
+	
+	
+
+	//@Override
+//	public List<NotesDto> getPinnedNotes(String token) {
+//		String id = userToken.tokenVerify(token);
+//		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
+//		List<NotesDto> listNotes = new ArrayList<>();
+//		for(Note userNotes : notes) {
+//			if(userNotes.isPin() == true && userNotes.isArchive() == false && userNotes.isTrash() == false) {
+//			listNotes.add(notesDto);
+//			}
+//		}
+//		return listNotes;
+//	}
+
+	@Override
+	public List<Note> getUnPinnedNotes(String token) {
+		String id = userToken.tokenVerify(token);
+		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
+		List<Note> listNotes = new ArrayList<>();
+		for(Note userNotes : notes) {
+			if(userNotes.isPin() == false && userNotes.isArchive() == false && userNotes.isTrash() == false) {
+				listNotes.add(userNotes);
+			}
+		}
+		return listNotes;
+	}
+	
+	@Override
+	public List<Note> getPinnedNotes(String token) {
+		String id = userToken.tokenVerify(token);
+		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
+		List<Note> listNotes = new ArrayList<>();
+		for(Note userNotes : notes) {
+			System.out.println("note pin-->"+userNotes.isPin());
+			if(userNotes.isPin()) {
+				listNotes.add(userNotes);
+			}
+		}
+		return listNotes;
+	}
  
 
 	 

@@ -1,6 +1,7 @@
 package com.bridgelabz.fundoo.user.controller;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import javax.validation.Valid;
 import org.slf4j.Logger;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bridgelabz.fundoo.notes.model.Note;
 import com.bridgelabz.fundoo.response.Response;
 import com.bridgelabz.fundoo.response.ResponseToken;
 import com.bridgelabz.fundoo.user.dto.LoginDTO;
@@ -82,6 +84,9 @@ public class UserController {
 		return new ResponseEntity<Response> (statusResponse,HttpStatus.OK);
 		
 	}
+	
+	
+	
  
 
 }

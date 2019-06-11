@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
  
 import com.bridgelabz.fundoo.notes.dto.NotesDto;
- 
+import com.bridgelabz.fundoo.notes.model.Note;
 import com.bridgelabz.fundoo.response.Response;
 @Service
 public interface INotesService {
@@ -21,7 +21,7 @@ public interface INotesService {
 	public Response updateNote(NotesDto notesDto, String token, String userId);
 	
 	 
-	public List<NotesDto>  getAllNotes(String token);
+	public List<Note>  getAllNotes(String token);
 	
 	// Method to archive and unarchive
 	public Response archiveAndUnArchive(String token, String noteId);
@@ -38,5 +38,9 @@ public interface INotesService {
 	
 	public Response deletePermanently(String token, String noteId);
 	
+	//public List<NotesDto> getPinnedNotes(String token);
+	public List<Note> getUnPinnedNotes(String token);
+	
+	public List<Note> getPinnedNotes(String token);
 	 
 }
