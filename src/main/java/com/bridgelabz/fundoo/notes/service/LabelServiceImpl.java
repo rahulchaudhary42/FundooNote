@@ -198,8 +198,8 @@ public class LabelServiceImpl implements ILabelService {
 		}
 		note.setModified(LocalDateTime.now());
 		note.setLabel(label);
-		note.getListLabel().remove(label);
-		// label.getNotes().add(note);
+		//note.getListLabel().remove(label);
+		 label.getNotes().add(note);
 		notesRepository.save(note);
 		Response response = StatusHelper.statusInfo(environment.getProperty("status.label.removedfromnote"),
 				Integer.parseInt(environment.getProperty("status.success.code")));
