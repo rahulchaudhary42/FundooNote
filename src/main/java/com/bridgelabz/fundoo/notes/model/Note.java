@@ -17,6 +17,7 @@ public class Note implements Serializable {
 	private String userId;
 	private String title;
 	private String description;
+	private String colorCode;
 	private boolean isPin;
 	private boolean isArchive;
 	private boolean isTrash;
@@ -38,6 +39,14 @@ public class Note implements Serializable {
 
 	public Note() {
 		super();
+	}
+   
+	public String getColorCode() {
+		return colorCode;
+	}
+
+	public void setColorCode(String colorCode) {
+		this.colorCode = colorCode;
 	}
 
 	public String getId() {
@@ -127,9 +136,12 @@ public class Note implements Serializable {
 	@Override
 	public String toString() {
 		return "Note [id=" + id + ", userId=" + userId + ", title=" + title + ", description=" + description
-				+ ", isPin=" + isPin + ", isArchive=" + isArchive + ", isTrash=" + isTrash + ", created=" + created
-				+ ", modified=" + modified + ", listLabel=" + listLabel + ", label=" + label + "]";
+				+ ", colorCode=" + colorCode + ", isPin=" + isPin + ", isArchive=" + isArchive + ", isTrash=" + isTrash
+				+ ", created=" + created + ", modified=" + modified + ", listLabel=" + listLabel + ", label=" + label
+				+ "]";
 	}
+
+	 
 
  
 

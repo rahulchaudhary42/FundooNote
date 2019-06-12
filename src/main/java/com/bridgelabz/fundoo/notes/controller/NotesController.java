@@ -98,11 +98,11 @@ public class NotesController {
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
 	}
 	
-//	@GetMapping("/getpinnednotes")
-//	public List<Note> getPinnedNotes(@RequestHeader String token){
-//		List<Note> listnotes = noteService.getPinnedNotes(token);
-//		return listnotes;
-//	}
+	@PutMapping("/color")
+	public ResponseEntity<Response> changeColor(@RequestHeader String token, @RequestParam String noteId,@RequestParam String colorCode) {
+		Response responseStatus = noteService.setColor(token, colorCode, noteId);
+		return new  ResponseEntity<Response> (responseStatus,HttpStatus.OK);
+	}
 	
 	@GetMapping("/getunpinnednotes")
 	public List<Note> getUnPinnedNotes(@RequestHeader String token){

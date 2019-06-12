@@ -130,6 +130,18 @@ public class NotesServiceImpl implements INotesService {
 				Integer.parseInt(environment.getProperty("status.note.errorCode")));
 		return response;
 	}
+	
+	@Override
+	public Response setColor(String token, String colorCode , String noteId) {
+		String uderId = userToken.tokenVerify(token);
+		Note note = notesRepository.findByIdAndUserId(noteId, uderId);
+		note.setColorCode(colorCode);
+		note.setModified(LocalDateTime.now());
+		Note ab=notesRepository.save(note);
+		System.err.println("color->"+ab);
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.note.color"),Integer.parseInt(environment.getProperty("status.success.code")));
+		return response;
+	}
 
 	@Override
 	public Response pinAndUnPin(String token, String id) {
