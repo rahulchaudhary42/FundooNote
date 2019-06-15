@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.bridgelabz.fundoo.notes.dto.LabelDto;
+import com.bridgelabz.fundoo.notes.model.Label;
 import com.bridgelabz.fundoo.response.Response;
 
 @Service
@@ -19,7 +20,7 @@ public interface ILabelService {
 	// Method to update label
 	public Response updateLabel(String labelId , String token ,LabelDto labelDto);
 	
-	public List<LabelDto> getAllLabel(String token);
+	public List<Label> getAllLabel(String token);
 	
 	public Response addLabelToNote(String labelId, String token , String noteId);
 	

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoo.notes.dto.LabelDto;
+import com.bridgelabz.fundoo.notes.model.Label;
 import com.bridgelabz.fundoo.notes.service.ILabelService;
 import com.bridgelabz.fundoo.response.Response;
 
@@ -47,8 +48,8 @@ public class LabelController {
 	}
 
 	@GetMapping("/getlabel")
-	List<LabelDto> getLabel(@RequestHeader String token){
-		List<LabelDto> listLabel = labelService.getAllLabel(token);
+	List<Label> getLabel(@RequestHeader String token){
+		List<Label> listLabel = labelService.getAllLabel(token);
 		return listLabel;
 	}
 	

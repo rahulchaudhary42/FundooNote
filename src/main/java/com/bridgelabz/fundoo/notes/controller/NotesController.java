@@ -92,9 +92,9 @@ public class NotesController {
 		return listnotes;
 	}
 	
-	@DeleteMapping("/deletepermanent")
-	public ResponseEntity<Response> deleteNote(@RequestHeader String token, @RequestParam String noteId){
-		Response responseStatus = noteService.deletePermanently(token, noteId);
+	@DeleteMapping("/deletepermanently")
+	public ResponseEntity<Response> deleteNote(@RequestHeader String token, @RequestParam String id){
+		Response responseStatus = noteService.deletePermanently(token, id);
 		return new ResponseEntity<Response> (responseStatus,HttpStatus.OK);
 	}
 	

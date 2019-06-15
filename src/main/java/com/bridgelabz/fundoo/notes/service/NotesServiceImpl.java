@@ -247,9 +247,9 @@ public class NotesServiceImpl implements INotesService {
 	}
 	
 	@Override
-	public Response deletePermanently(String token, String noteId) {
-		String id = userToken.tokenVerify(token);
-		Note notes = notesRepository.findByIdAndUserId(noteId, id);
+	public Response deletePermanently(String token, String id) {
+		String ide = userToken.tokenVerify(token);
+		Note notes = notesRepository.findByIdAndUserId(id, ide);
 		if(notes.isTrash() == true) {
 			notesRepository.delete(notes);
 			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.deleted"),Integer.parseInt(environment.getProperty("status.success.code")));
@@ -305,7 +305,7 @@ public class NotesServiceImpl implements INotesService {
 		List<Note> listNotes = new ArrayList<>();
 		for(Note userNotes : notes) {
 			System.out.println("note pin-->"+userNotes.isPin());
-			if(userNotes.isPin()) {
+			if(userNotes.isPin() == true && userNotes.isArchive() == false && userNotes.isTrash() == false) {
 				listNotes.add(userNotes);
 			}
 		}
