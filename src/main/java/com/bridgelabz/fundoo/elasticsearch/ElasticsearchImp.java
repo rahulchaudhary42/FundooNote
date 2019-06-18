@@ -24,6 +24,7 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.bridgelabz.fundoo.notes.model.Note;
+import com.bridgelabz.fundoo.util.UserToken;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
@@ -37,6 +38,8 @@ public class ElasticsearchImp implements IElasticsearch {
 
 	@Autowired
 	ObjectMapper objectMapper;
+	@Autowired
+	private UserToken userToken;
 
 	@Override
 	public String createNote(Note note) throws IOException {
@@ -49,7 +52,7 @@ public class ElasticsearchImp implements IElasticsearch {
 	}
 
 	@Override
-	public String upDateNote(Note note) throws Exception {
+	public String updateNote(Note note) throws Exception {
 		@SuppressWarnings("unused")
 		Note notes = findById(note.getId());
 		@SuppressWarnings("deprecation")
@@ -97,6 +100,7 @@ public class ElasticsearchImp implements IElasticsearch {
 
 	@Override
 	public List<Note> searchByTitle(String title, String userId) throws IOException {
+		userId = userToken.tokenVerify(userId);
 		BoolQueryBuilder queryBuilder = QueryBuilders.boolQuery().must(QueryBuilders.matchQuery("title", title))
 				.filter(QueryBuilders.termsQuery("userId", userId));
 		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();

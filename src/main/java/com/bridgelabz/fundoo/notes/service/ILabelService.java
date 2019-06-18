@@ -26,7 +26,7 @@ public interface ILabelService {
 	
 	public Response removeLabelFromNote(String labelId ,String token , String noteId);
   
-	
+	public List<Label> getLebelsOfNote(String token, String noteId);
 	public Response addNoteToLabel(String labelId, String token, String noteId);
 	
 	public Response removeNoteFromLabel(String labelId, String token, String noteId);

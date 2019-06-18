@@ -1,4 +1,5 @@
 package com.bridgelabz.fundoo.notes.controller;
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bridgelabz.fundoo.elasticsearch.IElasticsearch;
 import com.bridgelabz.fundoo.notes.dto.NotesDto;
 import com.bridgelabz.fundoo.notes.model.Note;
 import com.bridgelabz.fundoo.notes.service.INotesService;
@@ -35,6 +37,9 @@ public class NotesController {
 	
 	@Autowired
 	private INotesService noteService;
+	
+	@Autowired
+	IElasticsearch esService;
 	
 	@PostMapping("/create")
 	public ResponseEntity<Response> creatingNote(HttpServletRequest request , @RequestBody NotesDto notesDto , @RequestHeader("token") String token){
@@ -81,14 +86,14 @@ public class NotesController {
 	}
 	
 	@GetMapping("/getarchivenotes")
-	public List<NotesDto>  getArchiveNotes(@RequestHeader String token) {
-		List<NotesDto> listnotes = noteService.getArchiveNotes(token);
+	public List<Note>  getArchiveNotes(@RequestHeader String token) {
+		List<Note> listnotes = noteService.getArchiveNotes(token);
 		return listnotes;
 	}
 	
 	@GetMapping("/gettrashnotes")
-	public List<NotesDto>  getTrashNotes(@RequestHeader String token) {
-		List<NotesDto> listnotes = noteService.getTrashNotes(token);
+	public List<Note>  getTrashNotes(@RequestHeader String token) {
+		List<Note> listnotes = noteService.getTrashNotes(token);
 		return listnotes;
 	}
 	
@@ -115,7 +120,10 @@ public class NotesController {
 		List<Note> listnotes = noteService.getPinnedNotes(token);
 		return listnotes;
 	}
-	
+	@GetMapping("/searchTitle")
+	public List<Note> searchTitle(@RequestParam String title , @RequestParam String token) throws IOException {
+	return esService.searchByTitle(title,token);
+	}
 
 
 }

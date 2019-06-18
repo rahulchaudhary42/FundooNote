@@ -71,6 +71,12 @@ public class LabelController {
 		return new ResponseEntity<Response>(statusResponse,HttpStatus.OK);
 	}
 	
+	@GetMapping("/getlebelofnote")
+	List<Label> getLebelOfNote(@RequestHeader String token, @RequestParam String noteId){
+		List<Label> listLabel = labelService.getLebelsOfNote(token, noteId);
+		return listLabel;
+	}
+	
 //	@PutMapping("/removefromnote")
 //	ResponseEntity<Response> removeFromLabel(@RequestHeader String token, @RequestParam String noteId , @RequestParam String labelId){
 //		Response statusResponse = labelService.removeNoteFromLabel(labelId, token, noteId);

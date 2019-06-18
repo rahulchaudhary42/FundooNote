@@ -6,6 +6,7 @@ import java.util.List;
 import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,7 @@ import com.bridgelabz.fundoo.notes.model.Note;
 
 @RestController
 @RequestMapping("/EsNote")
+@CrossOrigin(origins = "*",allowedHeaders = "*")
 public class ElasticsearchController {
 
 	@Autowired(required = true)
@@ -45,12 +47,12 @@ public class ElasticsearchController {
 	@PutMapping("/update")
 	public String updateNote(@RequestBody Note note) throws Exception
 	{
-	return esService.upDateNote(note);
+	return esService.updateNote(note);
 	}
 	
  	@GetMapping("/searchTitle")
-	public List<Note> searchTitle(@RequestParam String title , @RequestParam String userId) throws IOException {
-	return esService.searchByTitle(title,userId);
+	public List<Note> searchTitle(@RequestParam String title , @RequestParam String token) throws IOException {
+	return esService.searchByTitle(title,token);
 	}
 
 }

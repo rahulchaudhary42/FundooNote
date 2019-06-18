@@ -13,7 +13,7 @@ public interface IElasticsearch {
 	String createNote(Note note) throws IOException;
 	public String deleteNote(String id) throws IOException;
 	public Note findById(String id) throws Exception;
-	public String upDateNote(Note note) throws Exception;
+	public String updateNote(Note note) throws Exception;
 	public List<Note> searchByTitle(String title,String userId) throws IOException;
 
 }

@@ -26,16 +26,18 @@ public class Note implements Serializable {
 
 	@DBRef
 	private List<Label> listLabel;
+	
+	
 
-	private Label label;
-
-	public Label getLabel() {
-		return label;
-	}
-
-	public void setLabel(Label label) {
-		this.label = label;
-	}
+	//private Label label;
+//
+//	public Label getLabel() {
+//		return label;
+//	}
+//
+//	public void setLabel(Label label) {
+//		this.label = label;
+//	}
 
 	public Note() {
 		super();
@@ -121,6 +123,11 @@ public class Note implements Serializable {
 		this.modified = modified;
 	}
 
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	public List<Label> getListLabel() {
 		return listLabel;
 	}
@@ -129,17 +136,8 @@ public class Note implements Serializable {
 		this.listLabel = listLabel;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 
-	@Override
-	public String toString() {
-		return "Note [id=" + id + ", userId=" + userId + ", title=" + title + ", description=" + description
-				+ ", colorCode=" + colorCode + ", isPin=" + isPin + ", isArchive=" + isArchive + ", isTrash=" + isTrash
-				+ ", created=" + created + ", modified=" + modified + ", listLabel=" + listLabel + ", label=" + label
-				+ "]";
-	}
+	 
 
 	 
 

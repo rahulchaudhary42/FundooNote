@@ -32,9 +32,9 @@ public interface INotesService {
 	// Method to trash and untrash
 	public Response trashAndUnTrash(String token, String noteId);
 	
-	public List<NotesDto> getArchiveNotes(String token);
+	public List<Note> getArchiveNotes(String token);
 	
-	public List<NotesDto> getTrashNotes(String token); 
+	public List<Note> getTrashNotes(String token); 
 	
 	public Response deletePermanently(String token, String noteId);
 	

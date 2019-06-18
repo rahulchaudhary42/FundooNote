@@ -9,7 +9,7 @@ import com.bridgelabz.fundoo.notes.model.Label;
 
 public interface LabelRepository extends MongoRepository<Label , String>{
 	
-	 public Label findByLabelIdAndUserId(String labelId , String userId);
+	 public  Label findByLabelIdAndUserId(String labelId , String userId);
 	
 	public List<Label> findByUserId(String userId);
  

@@ -3,6 +3,8 @@ package com.bridgelabz.fundoo.user.service;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.nio.file.Path;
 import java.util.Date;
 import java.util.Optional;
 
@@ -11,6 +13,8 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,6 +25,7 @@ import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.DeleteObjectRequest;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.bridgelabz.fundoo.exception.LoginException;
 import com.bridgelabz.fundoo.response.Response;
 import com.bridgelabz.fundoo.user.model.User;
 import com.bridgelabz.fundoo.user.repository.IUserRepository;
@@ -116,4 +121,26 @@ public class AmazonService {
 				Integer.parseInt(environment.getProperty("status.login.errorCode")));
 		return response;
 	}
+	
+//	@Override
+//	public Resource getUploadedImage(String token) {
+//		String id = userToken.tokenVerify(token);
+//		Optional<User> user = userRepository.findById(id);
+//		if(!user.isPresent())
+//			throw new LoginException("User doesn't exist ", -3);
+//		Path imagePath = fileLocation.resolve(user.get().getProfilePic());
+//		try {
+//			Resource resource = new UrlResource(imagePath.toUri());
+//			if(resource.exists() || resource.isReadable())
+//			{
+//				return resource;
+//			}
+//		} catch (MalformedURLException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		return null;
+//	}
+//}
+	
 }

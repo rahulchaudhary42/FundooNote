@@ -14,6 +14,8 @@ import com.bridgelabz.fundoo.user.model.User;
 public interface IUserRepository extends MongoRepository<User, String>{
 
  public  Optional<User> findByEmail(String email);
+ 
+ Optional<User>findByUserId(String id);
 	 
 // @Query(value = "select * from user where email:=email")
 // public User findByEmailId(@Param("email")String email);

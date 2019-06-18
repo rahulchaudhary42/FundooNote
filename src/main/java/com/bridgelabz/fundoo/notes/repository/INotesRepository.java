@@ -13,8 +13,14 @@ public interface INotesRepository extends MongoRepository<Note, String>{
 	public Note findByIdAndUserId(String id , String userId);
 	
 //	@Query("{'usertab.userId':?0}")
-  //  List<Note> findByUserId(String userId);
-	 List<Note> findByUserId(String id);
+    List<Note> findByUserId(String userId);
+	// List<Note> findByUserId(String id);
 	 
 	 public List<Label> findAllListLabelById(String id);
+	 
+	// Optional<Note> findByNoteIdAndUserId(String id,String userId); 
+	 
+		//Optional<Note> findByidAndUserId(String id,String userId); 
+		 
+
 }
