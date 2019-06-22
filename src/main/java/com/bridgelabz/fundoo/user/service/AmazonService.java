@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Path;
 import java.util.Date;
 import java.util.Optional;
@@ -25,6 +26,7 @@ import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.DeleteObjectRequest;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+ 
 import com.bridgelabz.fundoo.exception.LoginException;
 import com.bridgelabz.fundoo.response.Response;
 import com.bridgelabz.fundoo.user.model.User;
@@ -88,7 +90,8 @@ public class AmazonService {
 			String fileUrl = "";
 			File file = convertMultiPartToFile(multipartFile);
 			String fileName = generateFileName(multipartFile);
-			fileUrl = endpointUrl + "/" + bucketName + "/" + fileName;
+			fileUrl = "https://"+bucketName + ".s3.ap-south-1.amazonaws.com/" + fileName;
+			// fileUrl = endpointUrl + "/" + bucketName + "/" + fileName;
 			uploadFileTos3bucket(fileName, file);
 			file.delete();
 			user.setImage(fileUrl);
@@ -122,26 +125,28 @@ public class AmazonService {
 		return response;
 	}
 	
-//	@Override
-//	public Resource getUploadedImage(String token) {
-//		String id = userToken.tokenVerify(token);
-//		Optional<User> user = userRepository.findById(id);
-//		if(!user.isPresent())
-//			throw new LoginException("User doesn't exist ", -3);
-//		Path imagePath = fileLocation.resolve(user.get().getProfilePic());
-//		try {
-//			Resource resource = new UrlResource(imagePath.toUri());
-//			if(resource.exists() || resource.isReadable())
-//			{
-//				return resource;
-//			}
-//		} catch (MalformedURLException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		return null;
-//	}
-//}
+	public URL getProfile(String token)
+	{
+		 
+		String id =userToken.tokenVerify(token);
+		boolean isUser = userRepository.findById(id).isPresent();
+		if (!isUser) {
+ 
+			System.out.println("Not found");
+		}
+		
+		User user=userRepository.findById(id).get();
+ 
+		String s1=user.getImage();
+		URL url = null;
+		try {
+			url = new URL(s1);
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return url;
+	}
 	
 	
 	

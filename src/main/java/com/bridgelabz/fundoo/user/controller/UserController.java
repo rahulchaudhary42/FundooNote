@@ -1,6 +1,7 @@
 package com.bridgelabz.fundoo.user.controller;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -27,6 +28,7 @@ import com.bridgelabz.fundoo.response.ResponseToken;
 import com.bridgelabz.fundoo.user.dto.LoginDTO;
 import com.bridgelabz.fundoo.user.dto.PasswordDTO;
 import com.bridgelabz.fundoo.user.dto.UserDTO;
+import com.bridgelabz.fundoo.user.service.AmazonService;
 import com.bridgelabz.fundoo.user.service.IUserServices;
 
 @RestController
@@ -40,6 +42,9 @@ public class UserController {
 	
  	@Autowired
  	private IUserServices userServices;
+ 	
+ 	@Autowired
+ 	private AmazonService amazonClient;
 	
 	// method for registration
 	@PostMapping("/register")
@@ -83,6 +88,13 @@ public class UserController {
 		Response statusResponse = userServices.reset(password, token);
 		return new ResponseEntity<Response> (statusResponse,HttpStatus.OK);
 		
+	}
+	
+	@GetMapping("/getProfile")
+	public URL getProfilePic(@RequestHeader String token)
+	{
+		URL profile=amazonClient.getProfile(token);
+		return profile;
 	}
 	
 	
