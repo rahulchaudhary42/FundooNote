@@ -85,7 +85,7 @@ public class UserServicesImplementation implements IUserServices {
 		email.setTo(userDTO.getEmail());
 		email.setSubject("Email Verification ");
 		try {
-			email.setBody(mailServise.getLink("http://localhost:8085/user/emailvalidation/", user.getUserId()));
+			email.setBody(mailServise.getLink("http://localhost:8085/user/emailvalidation/", saveResponse.getUserId()));
 		} catch (IllegalArgumentException | UnsupportedEncodingException e1) {
 			e1.printStackTrace();
 		}

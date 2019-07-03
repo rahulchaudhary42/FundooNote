@@ -175,8 +175,15 @@ public class NotesServiceImpl implements INotesService {
 		String uderId = userToken.tokenVerify(token);
 		Note note = notesRepository.findByIdAndUserId(noteId, uderId);
 		note.setColorCode(colorCode);
+		 
 		note.setModified(LocalDateTime.now());
 		Note ab = notesRepository.save(note);
+		try {
+			elasticsearch.createNote(ab);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.err.println("color->" + ab);
 		Response response = StatusHelper.statusInfo(environment.getProperty("status.note.color"),
 				Integer.parseInt(environment.getProperty("status.success.code")));
