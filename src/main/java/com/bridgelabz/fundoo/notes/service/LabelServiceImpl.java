@@ -151,49 +151,7 @@ public class LabelServiceImpl implements ILabelService {
 		return listLabel;
 	}
  
-//	@SuppressWarnings("unused")
-//	public Response addLabelToNote(String noteId, String token, String labelId) {
-//		String id = TokenUtility.verifyToken(token);
-//		Optional<User> optionalUser = iUserRespository.findById(id);
-//		Optional<Note> optionalNote = iNoteRepository.findById(noteId);
-//		Optional<Label> optionalLabel = iLabelRepository.findById(labelId);
-//		if (optionalUser.isPresent() && optionalLabel.isPresent() && optionalNote.isPresent()) {
-//			Label label = optionalLabel.get();
-//			Note note = optionalNote.get();
-//			System.err.println(label);
-//			note.setUpdateTime(Utility.todayDate());
-//			List<Label> labels = note.getLabels();
-//			if (labels != null) {
-//				Optional<Label> opLabel = labels.stream().filter(l -> l.getLableName().equals(label.getLableName()))
-//						.findFirst();
-//				System.out.println(opLabel);
-//				if (!opLabel.isPresent()) {
-//					labels.add(label);
-//					note.setLabels(labels);
-//					note = iNoteRepository.save(note);
-//					System.out.println("save label in note" + note);
-//					Response response = ResponceUtilty.getResponse(200, token, environment.getProperty("label.note.add"));
-//					return response;
-//				}
-//			} 
-//			else if (labels== null) {
-//				labels = new ArrayList<Label>();
-//				labels.add(label);
-//				note.setLabels(labels);
-//				iNoteRepository.save(note);
-//				}
-//			else {
-//				Response response = ResponceUtilty.getResponse(204, "",  environment.getProperty("label.note.add.fail"));
-//
-//				return response;
-//			}
-//		
-//	}
-//		Response response = ResponceUtilty.getResponse(204, "0",environment.getProperty("label.note.add"));
-//
-//	return response;
-//
-//	}
+ 
 
 	
 	@SuppressWarnings("unused")

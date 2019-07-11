@@ -355,5 +355,29 @@ public class NotesServiceImpl implements INotesService {
 		}
 		return listNotes;
 	}
-
+   
+	@Override
+	public Response addReminder(String token, String noteId, String time) {
+		String userId = userToken.tokenVerify(token);
+		Optional<User> user = userRepository.findByUserId(userId);
+		if(!user.isPresent())
+			throw new NotesException("No user exist", -5);	
+		Optional<Note> note = notesRepository.findById(noteId);
+		note.get().setReminder(time);
+		notesRepository.save(note.get());
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.reminder.added"),Integer.parseInt(environment.getProperty("status.success.code")));
+		return response;
+	}
+	
+	@Override
+	public String getRemainders(String token, String noteId) {
+		String userId = userToken.tokenVerify(token);
+		Optional<User> user = userRepository.findById(userId);
+		if(!user.isPresent())
+			throw new NotesException("No user exist", -5);	
+		Optional<Note> note = notesRepository.findById(noteId);
+		String remainder = note.get().getReminder();
+		return remainder;
+	}
+	
 }

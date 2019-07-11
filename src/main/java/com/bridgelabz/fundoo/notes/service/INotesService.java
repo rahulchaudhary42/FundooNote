@@ -44,4 +44,8 @@ public interface INotesService {
 	public List<Note> getPinnedNotes(String token);
 	 
 	public Response setColor(String token , String colorCode , String noteId);
+	
+	public Response addReminder(String token, String noteId, String time); 
+	
+	public String getRemainders(String token, String noteId);
 }

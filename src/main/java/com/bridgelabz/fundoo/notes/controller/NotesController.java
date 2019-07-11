@@ -124,6 +124,22 @@ public class NotesController {
 	public List<Note> searchTitle(@RequestParam String title , @RequestParam String token) throws IOException {
 	return esService.searchByTitle(title,token);
 	}
+	
+	@PutMapping("/addreminder")
+	public ResponseEntity<Response> addingReminder(@RequestHeader String token , @RequestParam String noteId , @RequestParam String reminder) {
+		Response responseStatus = noteService.addReminder(token, noteId, reminder);
+		return new  ResponseEntity<Response> (responseStatus,HttpStatus.OK);
+	}
+	
+	@GetMapping("/getremainders")
+	public ResponseEntity<String> getRemainder(@RequestHeader String token , @RequestParam String noteId) {
+		String responseStatus = noteService.getRemainders(token, noteId);
+		return new  ResponseEntity<String> (responseStatus,HttpStatus.OK);
+	}
+	
+	
+	
+	
 
 
 }

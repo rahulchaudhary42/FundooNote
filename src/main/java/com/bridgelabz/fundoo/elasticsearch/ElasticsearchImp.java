@@ -113,20 +113,6 @@ public class ElasticsearchImp implements IElasticsearch {
 
 		return getSearchResult(response);
 	}
-//	@Override
-//	public List<Note> searchByTitle(String title, String userId) throws IOException {
-//		userId = userToken.tokenVerify(userId);
-//		BoolQueryBuilder queryBuilder = QueryBuilders.boolQuery().must(QueryBuilders.matchQuery("title", title))
-//				.filter(QueryBuilders.termsQuery("userId", userId));
-//		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-//		searchSourceBuilder.query(queryBuilder);
-//		SearchRequest searchRequest = new SearchRequest();
-//		searchRequest.source(searchSourceBuilder);
-//		SearchResponse response = null;
-//
-//		response = client.search(searchRequest, RequestOptions.DEFAULT);
-//
-//		return getSearchResult(response);
-//	}
+ 
 
 }

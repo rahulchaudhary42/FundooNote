@@ -18,6 +18,7 @@ public class Note implements Serializable {
 	private String title;
 	private String description;
 	private String colorCode;
+	private String reminder;
 	private boolean isPin;
 	private boolean isArchive;
 	private boolean isTrash;
@@ -134,6 +135,14 @@ public class Note implements Serializable {
 
 	public void setListLabel(List<Label> listLabel) {
 		this.listLabel = listLabel;
+	}
+
+	public String getReminder() {
+		return reminder;
+	}
+
+	public void setReminder(String reminder) {
+		this.reminder = reminder;
 	}
 
 
