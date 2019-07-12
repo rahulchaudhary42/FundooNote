@@ -145,6 +145,14 @@ public class Note implements Serializable {
 		this.reminder = reminder;
 	}
 
+	@Override
+	public String toString() {
+		return "Note [id=" + id + ", userId=" + userId + ", title=" + title + ", description=" + description
+				+ ", colorCode=" + colorCode + ", reminder=" + reminder + ", isPin=" + isPin + ", isArchive="
+				+ isArchive + ", isTrash=" + isTrash + ", created=" + created + ", modified=" + modified
+				+ ", listLabel=" + listLabel + "]";
+	}
+
 
 	 
 

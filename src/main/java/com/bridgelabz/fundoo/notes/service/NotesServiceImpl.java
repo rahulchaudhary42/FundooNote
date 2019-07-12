@@ -59,7 +59,7 @@ public class NotesServiceImpl implements INotesService {
 	private ObjectMapper objectMapper;
 
 	@Override
-	public Response createNote(NotesDto notesDto, String token) {
+	public Response createNote( String token, NotesDto notesDto) {
 		System.out.println(notesDto.getTitle() + "\t" + notesDto.getDescription());
 		String id = userToken.tokenVerify(token);
 		logger.info(notesDto.toString());

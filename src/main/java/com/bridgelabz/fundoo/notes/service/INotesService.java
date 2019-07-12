@@ -12,7 +12,7 @@ import com.bridgelabz.fundoo.response.Response;
 public interface INotesService {
 
 	// Method to create note
-	public Response createNote(NotesDto notesDto ,String token);
+	Response createNote(String token, NotesDto notesDto);
 
 	// Method to delete note
 	public Response delete(String token , String userId);
@@ -48,4 +48,6 @@ public interface INotesService {
 	public Response addReminder(String token, String noteId, String time); 
 	
 	public String getRemainders(String token, String noteId);
+
+	
 }

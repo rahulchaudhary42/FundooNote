@@ -44,9 +44,18 @@ public class NotesController {
 	@PostMapping("/create")
 	public ResponseEntity<Response> creatingNote(HttpServletRequest request , @RequestBody NotesDto notesDto , @RequestHeader("token") String token){
 		logger.info(notesDto.toString());
-		Response responseStatus = noteService.createNote(notesDto, token);
+		Response responseStatus = noteService.createNote(token, notesDto);
 		return new ResponseEntity<Response>(responseStatus,HttpStatus.OK);
 	}
+	
+//	@PostMapping
+//	public ResponseEntity<Response> creatingNote(HttpServletRequest request, @RequestHeader String token,
+//			@RequestBody NotesDto notesDto) {
+//		String userId = request.getAttribute("userId").toString();
+//		Response statusResponse = noteService.createNote(userId, notesDto);
+//		return new ResponseEntity<Response>(statusResponse, HttpStatus.OK);
+//	}
+	
 	
 	@PutMapping("/update")
 	public ResponseEntity<Response> updatingNote(@RequestBody NotesDto notesDto , @RequestHeader String token , @RequestParam String id){

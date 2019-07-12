@@ -153,60 +153,97 @@ public class LabelServiceImpl implements ILabelService {
  
  
 
+//	
+//	@SuppressWarnings("unused")
+//	@Override
+//	public Response addLabelToNote(String labelId, String token, String noteId) {
+//		String id = userToken.tokenVerify(token);
+//		Optional<User> optionalUser =userRepository.findById(id);
+// 	    Optional<Note> optionalNote = notesRepository.findById(noteId);
+// 		Optional<Label> optionalLabel = labelRepository.findById(labelId);
+// 		if (optionalUser.isPresent() && optionalLabel.isPresent() && optionalNote.isPresent()) {
+//			Label label = optionalLabel.get();
+//			Note note = optionalNote.get();
+//			System.err.println(label);
+//			//note.setUpdateTime(Utility.todayDate());
+//			List<Label> labels =  note.getListLabel();
+//			if (labels != null) {
+//				Optional<Label> opLabel = labels.stream().filter(l -> l.getLabelName().equals(label.getLabelName()))
+//						.findFirst();
+//				System.out.println(opLabel);
+//				if (!opLabel.isPresent()) {
+//					labels.add(label);
+//					 
+//					note.setListLabel(labels);
+//					note = notesRepository.save(note);
+//					System.out.println("save label in note" + note);
+//					Response response =StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
+//							Integer.parseInt(environment.getProperty("status.success.code")));
+//					return response;
+//				}
+//			} 
+//			else if (labels== null) {
+//				labels = new ArrayList<Label>();
+//				labels.add(label);
+//				note.setListLabel(labels);
+//				notesRepository.save(note);
+//				Response response =StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
+//						Integer.parseInt(environment.getProperty("status.success.code")));
+//				return response;
+//				}
+//			
+//			else {
+//				Response response =StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
+//						Integer.parseInt(environment.getProperty("status.success.code")));
+//				return response;
+//			}
+//		
+//	}
+//		 
+//		 
+//
+//		Response response = StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
+//				Integer.parseInt(environment.getProperty("status.success.code")));
+//		return respons
+//	}
+
 	
-	@SuppressWarnings("unused")
 	@Override
 	public Response addLabelToNote(String labelId, String token, String noteId) {
-		String id = userToken.tokenVerify(token);
-		Optional<User> optionalUser =userRepository.findById(id);
- 	    Optional<Note> optionalNote = notesRepository.findById(noteId);
- 		Optional<Label> optionalLabel = labelRepository.findById(labelId);
- 		if (optionalUser.isPresent() && optionalLabel.isPresent() && optionalNote.isPresent()) {
-			Label label = optionalLabel.get();
-			Note note = optionalNote.get();
-			System.err.println(label);
-			//note.setUpdateTime(Utility.todayDate());
-			List<Label> labels =  note.getListLabel();
-			if (labels != null) {
-				Optional<Label> opLabel = labels.stream().filter(l -> l.getLabelName().equals(label.getLabelName()))
-						.findFirst();
-				System.out.println(opLabel);
-				if (!opLabel.isPresent()) {
-					labels.add(label);
-					 
-					note.setListLabel(labels);
-					note = notesRepository.save(note);
-					System.out.println("save label in note" + note);
-					Response response =StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
-							Integer.parseInt(environment.getProperty("status.success.code")));
-					return response;
-				}
-			} 
-			else if (labels== null) {
-				labels = new ArrayList<Label>();
-				labels.add(label);
-				note.setListLabel(labels);
-				notesRepository.save(note);
-				Response response =StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
-						Integer.parseInt(environment.getProperty("status.success.code")));
-				return response;
-				}
-			
-			else {
-				Response response =StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
-						Integer.parseInt(environment.getProperty("status.success.code")));
-				return response;
-			}
+		String userId = userToken.tokenVerify(token);
+		Optional<User> optionalUser =userRepository.findById(userId);
+		Optional<Note> note = notesRepository.findById(noteId);
+		Optional<Label> label = labelRepository.findById(labelId);
 		
-	}
-		 
-		 
-
-		Response response = StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
+		if(note.isPresent()) {
+			List<Label> labelList = note.get().getListLabel();
+			if(labelList!=null && !labelList.contains(label.get())) {
+				labelList.add(label.get());
+				note.get().setListLabel(labelList);
+				notesRepository.save(note.get());
+				System.out.println("Label == :"+label.get());
+				System.out.println("if"+note.get());
+			}else {
+				List<Label> newLabelList = new ArrayList<Label>();
+				newLabelList.add(label.get());
+				note.get().setListLabel(newLabelList);
+				notesRepository.save(note.get());
+				System.out.println("Label == :"+label.get());
+				System.out.println("LabelList == :"+newLabelList);
+				System.out.println("else"+note.get());
+			}
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.label.addedtonote"),
 				Integer.parseInt(environment.getProperty("status.success.code")));
-		return response;
+			return response;
+			
+		}else {
+			Response response = StatusHelper.statusInfo(environment.getProperty("status.label.note.added"),
+					Integer.parseInt(environment.getProperty("status.error.code")));
+				return response;
+		}
 	}
-
+	
+	
 	@Override
 	public Response removeLabelFromNote(String labelId, String token, String noteId) {
 		String userId = userToken.tokenVerify(token);
