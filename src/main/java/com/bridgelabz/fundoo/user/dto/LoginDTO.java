@@ -30,4 +30,11 @@ public class LoginDTO {
 		return "LoginDTO [email=" + email + ", password=" + password + "]";
 	}
 
+	public LoginDTO(String email, String password) {
+		super();
+		this.email = email;
+		this.password = password;
+	}
+	
+
 }

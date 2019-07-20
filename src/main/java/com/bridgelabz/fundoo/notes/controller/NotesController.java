@@ -145,10 +145,4 @@ public class NotesController {
 		String responseStatus = noteService.getRemainders(token, noteId);
 		return new  ResponseEntity<String> (responseStatus,HttpStatus.OK);
 	}
-	
-	
-	
-	
-
-
 }

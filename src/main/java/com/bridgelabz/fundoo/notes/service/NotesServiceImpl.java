@@ -23,6 +23,7 @@ import com.bridgelabz.fundoo.notes.repository.INotesRepository;
 import com.bridgelabz.fundoo.response.Response;
 import com.bridgelabz.fundoo.user.model.User;
 import com.bridgelabz.fundoo.user.repository.IUserRepository;
+import com.bridgelabz.fundoo.util.JWTTokenHelper;
 import com.bridgelabz.fundoo.util.StatusHelper;
 import com.bridgelabz.fundoo.util.UserToken;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -46,8 +47,11 @@ public class NotesServiceImpl implements INotesService {
 	private INotesRepository notesRepository;
 
 	@Autowired
+	private JWTTokenHelper jwtTokenHelper;
+
+	@Autowired
 	private Environment environment;
-	
+
 	@Autowired
 	private IElasticsearch elasticsearch;
 
@@ -59,7 +63,7 @@ public class NotesServiceImpl implements INotesService {
 	private ObjectMapper objectMapper;
 
 	@Override
-	public Response createNote( String token, NotesDto notesDto) {
+	public Response createNote(String token, NotesDto notesDto) {
 		System.out.println(notesDto.getTitle() + "\t" + notesDto.getDescription());
 		String id = userToken.tokenVerify(token);
 		logger.info(notesDto.toString());
@@ -113,7 +117,7 @@ public class NotesServiceImpl implements INotesService {
 		notes.setTitle(notesDto.getTitle());
 		notes.setDescription(notesDto.getDescription());
 		notes.setModified(LocalDateTime.now());
-		Note upadtednote =notesRepository.save(notes);
+		Note upadtednote = notesRepository.save(notes);
 		try {
 			elasticsearch.updateNote(upadtednote);
 		} catch (Exception e) {
@@ -135,7 +139,7 @@ public class NotesServiceImpl implements INotesService {
 		if (notes.isTrash() == false) {
 			notes.setTrash(true);
 			notes.setModified(LocalDateTime.now());
-			Note note=notesRepository.save(notes);
+			Note note = notesRepository.save(notes);
 			try {
 				elasticsearch.deleteNote(note.getId());
 			} catch (IOException e) {
@@ -150,32 +154,13 @@ public class NotesServiceImpl implements INotesService {
 				Integer.parseInt(environment.getProperty("status.note.errorCode")));
 		return response;
 	}
-	
-	
-//	@Override
-//	public Response delete(String token, String noteId) {
-//		String id = userToken.tokenVerify(token);
-//		Note notes = notesRepository.findByIdAndUserId(noteId, id);
-//		if(notes == null) {
-//			throw new NotesException("Invalid input", -5);
-//		}
-//		if(notes.isTrash() == false) {
-//			notes.setTrash(true);
-//			notes.setModified(LocalDateTime.now());
-//			notesRepository.save(notes);
-//			Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashed"),Integer.parseInt(environment.getProperty("status.success.code")));
-//			return response;
-//		}
-//		Response response = StatusHelper.statusInfo(environment.getProperty("status.note.trashError"),Integer.parseInt(environment.getProperty("status.note.errorCode")));
-//		return response;
-//	}
 
 	@Override
 	public Response setColor(String token, String colorCode, String noteId) {
-		String uderId = userToken.tokenVerify(token);
-		Note note = notesRepository.findByIdAndUserId(noteId, uderId);
+		String userId = userToken.tokenVerify(token);
+		Note note = notesRepository.findByIdAndUserId(noteId, userId);
 		note.setColorCode(colorCode);
-		 
+
 		note.setModified(LocalDateTime.now());
 		Note ab = notesRepository.save(note);
 		try {
@@ -237,13 +222,6 @@ public class NotesServiceImpl implements INotesService {
 	public List<Note> getAllNotes(String token) {
 		String id = userToken.tokenVerify(token);
 		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
-
-//		for (Note userNotes : notes) {
-//			NotesDto notesDto = modelMapper.map(userNotes, NotesDto.class);
-//			if (userNotes.isArchive() == false && userNotes.isTrash() == false) {
-//				listNotes.add(notesDto);
-//			}
-//		}
 		return notes;
 	}
 
@@ -310,25 +288,6 @@ public class NotesServiceImpl implements INotesService {
 		}
 	}
 
-//	@Override
-//	public List<NotesDto> getPinnedNotes(String token) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-
-	// @Override
-//	public List<NotesDto> getPinnedNotes(String token) {
-//		String id = userToken.tokenVerify(token);
-//		List<Note> notes = (List<Note>) notesRepository.findByUserId(id);
-//		List<NotesDto> listNotes = new ArrayList<>();
-//		for(Note userNotes : notes) {
-//			if(userNotes.isPin() == true && userNotes.isArchive() == false && userNotes.isTrash() == false) {
-//			listNotes.add(notesDto);
-//			}
-//		}
-//		return listNotes;
-//	}
-
 	@Override
 	public List<Note> getUnPinnedNotes(String token) {
 		String id = userToken.tokenVerify(token);
@@ -355,29 +314,30 @@ public class NotesServiceImpl implements INotesService {
 		}
 		return listNotes;
 	}
-   
+
 	@Override
 	public Response addReminder(String token, String noteId, String time) {
 		String userId = userToken.tokenVerify(token);
 		Optional<User> user = userRepository.findByUserId(userId);
-		if(!user.isPresent())
-			throw new NotesException("No user exist", -5);	
+		if (!user.isPresent())
+			throw new NotesException("No user exist", -5);
 		Optional<Note> note = notesRepository.findById(noteId);
 		note.get().setReminder(time);
 		notesRepository.save(note.get());
-		Response response = StatusHelper.statusInfo(environment.getProperty("status.reminder.added"),Integer.parseInt(environment.getProperty("status.success.code")));
+		Response response = StatusHelper.statusInfo(environment.getProperty("status.reminder.added"),
+				Integer.parseInt(environment.getProperty("status.success.code")));
 		return response;
 	}
-	
+
 	@Override
 	public String getRemainders(String token, String noteId) {
 		String userId = userToken.tokenVerify(token);
 		Optional<User> user = userRepository.findById(userId);
-		if(!user.isPresent())
-			throw new NotesException("No user exist", -5);	
+		if (!user.isPresent())
+			throw new NotesException("No user exist", -5);
 		Optional<Note> note = notesRepository.findById(noteId);
 		String remainder = note.get().getReminder();
 		return remainder;
 	}
-	
+
 }
