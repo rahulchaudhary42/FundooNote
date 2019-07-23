@@ -24,7 +24,9 @@ import com.bridgelabz.fundoo.user.dto.UserDTO;
 import com.bridgelabz.fundoo.user.model.Email;
 import com.bridgelabz.fundoo.user.model.User;
 import com.bridgelabz.fundoo.user.repository.IUserRepository;
+
 import com.bridgelabz.fundoo.util.JWTToken;
+
 import com.bridgelabz.fundoo.util.StatusHelper;
 import com.bridgelabz.fundoo.util.UserToken;
 
@@ -59,9 +61,6 @@ public class UserServicesImplementation implements IUserServices {
 	@SuppressWarnings("unused")
 	@Autowired
 	private JavaMailSender javaMailSender;
-	
-	@Autowired
-	private RabbitService rabbitService;
 
 	@Override
 	public Response register(UserDTO userDTO) {
@@ -95,10 +94,9 @@ public class UserServicesImplementation implements IUserServices {
 		} catch (IllegalArgumentException | UnsupportedEncodingException e1) {
 			e1.printStackTrace();
 		}
-		//mailServise.send(email);
-		// javaMailSender.send(email);
-		//mailServise.rabitsender(email);
-		rabbitService.send(email);
+		// mailServise.send(email);
+		 
+		mailServise.rabitsender(email);
 
 		response = StatusHelper.statusInfo(environment.getProperty("status.register.success"),
 				Integer.parseInt(environment.getProperty("status.success.code")));

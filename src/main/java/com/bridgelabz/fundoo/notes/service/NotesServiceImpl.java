@@ -15,7 +15,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
+ 
 import com.bridgelabz.fundoo.elasticsearch.IElasticsearch;
+import com.bridgelabz.fundoo.elasticsearch.NoteContainer;
+import com.bridgelabz.fundoo.elasticsearch.NoteOperation;
 import com.bridgelabz.fundoo.exception.NotesException;
 import com.bridgelabz.fundoo.notes.dto.NotesDto;
 import com.bridgelabz.fundoo.notes.model.Note;
@@ -24,7 +27,7 @@ import com.bridgelabz.fundoo.response.Response;
 import com.bridgelabz.fundoo.user.model.User;
 import com.bridgelabz.fundoo.user.repository.IUserRepository;
 import com.bridgelabz.fundoo.util.JWTToken;
- 
+import com.bridgelabz.fundoo.util.RabbitMqElasticSearch;
 import com.bridgelabz.fundoo.util.StatusHelper;
 import com.bridgelabz.fundoo.util.UserToken;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -35,7 +38,6 @@ public class NotesServiceImpl implements INotesService {
 
 	Logger logger = LoggerFactory.getLogger(NotesServiceImpl.class);
 
-	
 	@Autowired
 	private IUserRepository userRepository;
 
@@ -44,20 +46,25 @@ public class NotesServiceImpl implements INotesService {
 
 	@Autowired
 	private INotesRepository notesRepository;
-	
+
 	@SuppressWarnings("unused")
 	@Autowired
 	private UserToken userToken;
 
-
 	@Autowired
-	private  JWTToken jWTToken;
+	private JWTToken jWTToken;
 
 	@Autowired
 	private Environment environment;
 
 	@Autowired
 	private IElasticsearch elasticsearch;
+
+	@Autowired
+	private NoteContainer noteContainer;
+
+	@Autowired
+	private RabbitMqElasticSearch rabbitMqElasticSearch;
 
 	String INDEX = "es";
 	String TYPE = "createnote";
@@ -69,8 +76,8 @@ public class NotesServiceImpl implements INotesService {
 	@Override
 	public Response createNote(String token, NotesDto notesDto) {
 		System.out.println(notesDto.getTitle() + "\t" + notesDto.getDescription());
-		//String id = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String id = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		logger.info(notesDto.toString());
 
 		if (notesDto.getTitle().isEmpty() && notesDto.getDescription().isEmpty()) {
@@ -88,12 +95,14 @@ public class NotesServiceImpl implements INotesService {
 		note.setModified(LocalDateTime.now());
 		Note savednote = notesRepository.save(note);
 
-		try {
-			elasticsearch.createNote(savednote);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			elasticsearch.createNote(savednote);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+		noteContainer.setNotes(note);
+		noteContainer.setNoteoperation(NoteOperation.CREATE);
+		rabbitMqElasticSearch.rabitSenderElastic(noteContainer);
 		List<Note> notes = user.get().getNotes();
 
 		if (notes != null) {
@@ -117,8 +126,8 @@ public class NotesServiceImpl implements INotesService {
 			throw new NotesException("Title and description are empty", -5);
 		}
 
-		//String ide = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String ide = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		Note notes = notesRepository.findByIdAndUserId(noteId, userId);
 		notes.setTitle(notesDto.getTitle());
 		notes.setDescription(notesDto.getDescription());
@@ -137,8 +146,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public Response delete(String token, String noteId) {
-	//	String ide = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String ide = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		Note notes = notesRepository.findByIdAndUserId(noteId, userId);
 		if (notes == null) {
 			throw new NotesException("Invalid input", -5);
@@ -164,8 +173,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public Response setColor(String token, String colorCode, String noteId) {
-	//	String userId = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String userId = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		Note note = notesRepository.findByIdAndUserId(noteId, userId);
 		note.setColorCode(colorCode);
 
@@ -185,8 +194,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public Response pinAndUnPin(String token, String noteId) {
-		//String ide = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String ide = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		Note notes = notesRepository.findByIdAndUserId(noteId, userId);
 		if (notes == null) {
 			throw new NotesException("Invalid input", -5);
@@ -208,8 +217,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public Response archiveAndUnArchive(String token, String noteId) {
-		//String ide = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String ide = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		Note notes = notesRepository.findByIdAndUserId(noteId, userId);
 		if (notes == null) {
 			throw new NotesException("Invalid input", -5);
@@ -230,16 +239,16 @@ public class NotesServiceImpl implements INotesService {
 	}
 
 	public List<Note> getAllNotes(String token) {
-		//String userId = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String userId = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		List<Note> notes = (List<Note>) notesRepository.findByUserId(userId);
 		return notes;
 	}
 
 	@Override
 	public Response trashAndUnTrash(String token, String noteId) {
-		//String ide = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String ide = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		Note notes = notesRepository.findByIdAndUserId(noteId, userId);
 		if (notes.isTrash() == false) {
 			notes.setTrash(true);
@@ -258,8 +267,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public List<Note> getArchiveNotes(String token) {
-		//String id = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String id = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		List<Note> notes = (List<Note>) notesRepository.findByUserId(userId);
 		List<Note> listNotes = new ArrayList<>();
 		for (Note userNotes : notes) {
@@ -273,8 +282,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public List<Note> getTrashNotes(String token) {
-	//	String id = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String id = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		List<Note> notes = (List<Note>) notesRepository.findByUserId(userId);
 		List<Note> listNotes = new ArrayList<>();
 		for (Note userNotes : notes) {
@@ -288,8 +297,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public Response deletePermanently(String token, String noteId) {
-	//	String ide = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String ide = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		Note notes = notesRepository.findByIdAndUserId(noteId, userId);
 		if (notes.isTrash() == true) {
 			notesRepository.delete(notes);
@@ -305,8 +314,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public List<Note> getUnPinnedNotes(String token) {
-		//String id = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String id = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		List<Note> notes = (List<Note>) notesRepository.findByUserId(userId);
 		List<Note> listNotes = new ArrayList<>();
 		for (Note userNotes : notes) {
@@ -319,8 +328,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public List<Note> getPinnedNotes(String token) {
-	//	String id = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String id = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		List<Note> notes = (List<Note>) notesRepository.findByUserId(userId);
 		List<Note> listNotes = new ArrayList<>();
 		for (Note userNotes : notes) {
@@ -334,8 +343,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public Response addReminder(String token, String noteId, String time) {
-		//String userId = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String userId = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findByUserId(userId);
 		if (!user.isPresent())
 			throw new NotesException("No user exist", -5);
@@ -349,8 +358,8 @@ public class NotesServiceImpl implements INotesService {
 
 	@Override
 	public String getRemainders(String token, String noteId) {
-		//String userId = userToken.tokenVerify(token);
-		String userId=jWTToken.verifyToken(token);
+		// String userId = userToken.tokenVerify(token);
+		String userId = jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findById(userId);
 		if (!user.isPresent())
 			throw new NotesException("No user exist", -5);
