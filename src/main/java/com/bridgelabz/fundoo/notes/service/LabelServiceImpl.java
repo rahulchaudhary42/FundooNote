@@ -25,6 +25,7 @@ import com.bridgelabz.fundoo.notes.repository.LabelRepository;
 import com.bridgelabz.fundoo.response.Response;
 import com.bridgelabz.fundoo.user.model.User;
 import com.bridgelabz.fundoo.user.repository.IUserRepository;
+import com.bridgelabz.fundoo.util.JWTToken;
 import com.bridgelabz.fundoo.util.StatusHelper;
 import com.bridgelabz.fundoo.util.UserToken;
 
@@ -43,6 +44,9 @@ public class LabelServiceImpl implements ILabelService {
 
 	@Autowired
 	private INotesRepository notesRepository;
+	
+	@Autowired
+	JWTToken jWTToken;
 
 	@Autowired
 	private UserToken userToken;
@@ -53,7 +57,8 @@ public class LabelServiceImpl implements ILabelService {
 	@Override
 	public Response createLabel(LabelDto labelDto, String token) {
 		System.out.println(labelDto.getLabelName());
-		String userId = userToken.tokenVerify(token);
+		//String userId = userToken.tokenVerify(token);
+		String userId=jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findById(userId);
 		if (!user.isPresent()) {
 			throw new LabelException("Invalid input", -6);
@@ -92,7 +97,8 @@ public class LabelServiceImpl implements ILabelService {
 
 	@Override
 	public Response deleteLabel(String labelId, String token) {
-		String userId = userToken.tokenVerify(token);
+		//String userId = userToken.tokenVerify(token);
+		String userId=jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findById(userId);
 		if (!user.isPresent()) {
 			throw new LabelException("Invalid input", -6);
@@ -111,7 +117,8 @@ public class LabelServiceImpl implements ILabelService {
 	@Override
 	public Response updateLabel(String labelId, String token, LabelDto labelDto) {
 		// System.out.println(labelDto.getLabelName());
-		String userId = userToken.tokenVerify(token);
+		//String userId = userToken.tokenVerify(token);
+		String userId=jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findById(userId);
 		if (!user.isPresent()) {
 			throw new LabelException("Invalid input", -6);
@@ -137,7 +144,8 @@ public class LabelServiceImpl implements ILabelService {
 
 	@Override
 	public List<Label> getAllLabel(String token) {
-		String userId = userToken.tokenVerify(token);
+		//String userId = userToken.tokenVerify(token);
+		String userId=jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findById(userId);
 		if (!user.isPresent()) {
 			throw new LabelException("Invalid input", -6);
@@ -154,7 +162,8 @@ public class LabelServiceImpl implements ILabelService {
 
 	@Override
 	public Response addLabelToNote(String labelId, String token, String noteId) {
-		String userId = userToken.tokenVerify(token);
+		//String userId = userToken.tokenVerify(token);
+		String userId=jWTToken.verifyToken(token);
 		Optional<User> optionalUser = userRepository.findById(userId);
 		Optional<Note> note = notesRepository.findById(noteId);
 		Optional<Label> label = labelRepository.findById(labelId);
@@ -217,7 +226,8 @@ public class LabelServiceImpl implements ILabelService {
 
 	@Override
 	public Response addNoteToLabel(String labelId, String token, String noteId) {
-		String userId = userToken.tokenVerify(token);
+	//	String userId = userToken.tokenVerify(token);
+		String userId=jWTToken.verifyToken(token);
 		System.out.println("------------------");
 		Optional<User> user = userRepository.findById(userId);
 		System.out.println(user.isPresent());
@@ -247,7 +257,8 @@ public class LabelServiceImpl implements ILabelService {
 
 	@Override
 	public Response removeNoteFromLabel(String labelId, String token, String noteId) {
-		String userId = userToken.tokenVerify(token);
+		//String userId = userToken.tokenVerify(token);
+		String userId=jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findById(userId);
 		if (!user.isPresent()) {
 			throw new LabelException("Invalid input", -6);
@@ -272,7 +283,8 @@ public class LabelServiceImpl implements ILabelService {
 
 	@Override
 	public List<Label> getLebelsOfNote(String token, String noteId) {
-		String userId = userToken.tokenVerify(token);
+		//String userId = userToken.tokenVerify(token);
+		String userId=jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findById(userId);
 		if (!user.isPresent()) {
 			throw new LabelException("User does not exist", -6);

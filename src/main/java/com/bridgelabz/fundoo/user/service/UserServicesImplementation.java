@@ -24,6 +24,7 @@ import com.bridgelabz.fundoo.user.dto.UserDTO;
 import com.bridgelabz.fundoo.user.model.Email;
 import com.bridgelabz.fundoo.user.model.User;
 import com.bridgelabz.fundoo.user.repository.IUserRepository;
+import com.bridgelabz.fundoo.util.JWTToken;
 import com.bridgelabz.fundoo.util.StatusHelper;
 import com.bridgelabz.fundoo.util.UserToken;
 
@@ -45,8 +46,12 @@ public class UserServicesImplementation implements IUserServices {
 	@Autowired
 	private MailService mailServise;
 
+	@SuppressWarnings("unused")
 	@Autowired
 	private UserToken userToken;
+
+	@Autowired
+	private JWTToken jWTToken;
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -54,6 +59,9 @@ public class UserServicesImplementation implements IUserServices {
 	@SuppressWarnings("unused")
 	@Autowired
 	private JavaMailSender javaMailSender;
+	
+	@Autowired
+	private RabbitService rabbitService;
 
 	@Override
 	public Response register(UserDTO userDTO) {
@@ -61,15 +69,13 @@ public class UserServicesImplementation implements IUserServices {
 		Response response = null;
 		log.info(userDTO.toString());
 
-		// getting user record by email
 		Optional<User> avaiability = userRepository.findByEmail(userDTO.getEmail());
 
-		// Checking whether the user is existing or not
 		if (avaiability.isPresent()) {
 			throw new RegistrationException("User exist", -2);
 		}
 		userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
-		User user = modelMapper.map(userDTO, User.class);// storing value of one model into another
+		User user = modelMapper.map(userDTO, User.class);
 
 		user.setRegisteredDate(LocalDate.now());
 
@@ -89,8 +95,10 @@ public class UserServicesImplementation implements IUserServices {
 		} catch (IllegalArgumentException | UnsupportedEncodingException e1) {
 			e1.printStackTrace();
 		}
-		mailServise.send(email);
+		//mailServise.send(email);
 		// javaMailSender.send(email);
+		//mailServise.rabitsender(email);
+		rabbitService.send(email);
 
 		response = StatusHelper.statusInfo(environment.getProperty("status.register.success"),
 				Integer.parseInt(environment.getProperty("status.success.code")));
@@ -110,7 +118,8 @@ public class UserServicesImplementation implements IUserServices {
 			// Checking whether user is verified
 			if (user.get().isVarified() == true) {
 				if (passwordEncoder.matches(loginDto.getPassword(), user.get().getPassword())) {
-					String generatedToken = userToken.generateToken(user.get().getUserId());
+					// String generatedToken = userToken.generateToken(user.get().getUserId());
+					String generatedToken = jWTToken.generateToken(user.get().getUserId());
 					response = StatusHelper.tokenStatusInfo(environment.getProperty("status.login.success"),
 							Integer.parseInt(environment.getProperty("status.success.code")), generatedToken);
 					return response;
@@ -136,7 +145,8 @@ public class UserServicesImplementation implements IUserServices {
 	@Override
 	public Response validateEmail(String token) {
 		Response response = null;
-		String id = userToken.tokenVerify(token);
+		// String id = userToken.tokenVerify(token);
+		String id = jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findById(id).map(this::verify);
 		if (user.isPresent()) {
 			response = StatusHelper.statusInfo(environment.getProperty("status.email.verified"),
@@ -146,20 +156,21 @@ public class UserServicesImplementation implements IUserServices {
 			throw new LoginException("EmailId is not verified", -3);
 		}
 	}
-	 public Response reset(String password, String token)
-	 {
-		 System.out.println("dsfgkdjg  "+password);
-		 String id = userToken.tokenVerify(token);
-		 Optional<User> user = userRepository.findById(id);
-		 User user1 = user.get();
-		 user1.setPassword(passwordEncoder.encode(password));
-		 userRepository.save(user1);
-		 Response response = new Response();
-		 response.setStatusCode(1);
-        response.setStatusMessage("Successfully reset");
-		 return response;
-		 
-	 }
+
+	public Response reset(String password, String token) {
+		System.out.println("dsfgkdjg  " + password);
+		// String id = userToken.tokenVerify(token);
+		String id = jWTToken.verifyToken(token);
+		Optional<User> user = userRepository.findById(id);
+		User user1 = user.get();
+		user1.setPassword(passwordEncoder.encode(password));
+		userRepository.save(user1);
+		Response response = new Response();
+		response.setStatusCode(1);
+		response.setStatusMessage("Successfully reset");
+		return response;
+
+	}
 
 	@Override
 	public Response forgotPassword(String email) {
@@ -193,7 +204,8 @@ public class UserServicesImplementation implements IUserServices {
 	@Override
 	public Response resetPassword(PasswordDTO passwordDto, String token) {
 		Response response = null;
-		String id = userToken.tokenVerify(token);
+		// String id = userToken.tokenVerify(token);
+		String id = jWTToken.verifyToken(token);
 		Optional<User> user = userRepository.findById(id);
 		if (passwordDto.getNewPassword().equals(passwordDto.getConfirmPassword())) {
 			user.get().setPassword(passwordEncoder.encode(passwordDto.getNewPassword()));
@@ -209,8 +221,4 @@ public class UserServicesImplementation implements IUserServices {
 		return response;
 	}
 
-	 
-	
-	
-	
 }
